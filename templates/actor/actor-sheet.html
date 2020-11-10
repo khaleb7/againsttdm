@@ -37,7 +37,7 @@
               <div class="ability flexrow flex-group-center">
                 <label for="data.stats.{{key}}.value" class="resource-label">{{key}}</label>
                 <input type="text" name="data.stats.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+                <span class="ability-mod rollable" data-roll="d100+@stats.{{key}}.value" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
               </div>
             {{/each}}
           </div>
@@ -46,7 +46,7 @@
                 <div class="ability flexrow flex-group-center">
                     <label for="data.saves.{{key}}.value" class="resource-label">{{key}}</label>
                     <input type="text" name="data.saves.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                    <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+                    <span class="ability-mod rollable" data-roll="d100+@stats.{{key}}.value" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
                 </div>
                 {{/each}}
             </div>
@@ -55,7 +55,7 @@
                 <div class="ability flexrow flex-group-center">
                     <label for="data.armorSkills.{{key}}.value" class="resource-label">{{key}}</label>
                     <input type="text" name="data.armorSkills.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                    <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+                    <span class="ability-mod rollable" data-roll="d100+@stats.{{key}}.value" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
                 </div>
                 {{/each}}
             </div>
@@ -64,7 +64,7 @@
                 <div class="ability flexrow flex-group-center">
                     <label for="data.combatSkills.{{key}}.value" class="resource-label">{{key}}</label>
                     <input type="text" name="data.combatSkills.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                    <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+                    <span class="ability-mod rollable" data-roll="d100+@stats.{{key}}.value" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
                 </div>
                 {{/each}}
             </div>
@@ -73,7 +73,7 @@
                 <div class="ability flexrow flex-group-center">
                     <label for="data.adventuringSkills.{{key}}.value" class="resource-label">{{key}}</label>
                     <input type="text" name="data.adventuringSkills.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                    <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+                    <span class="ability-mod rollable" data-roll="d100+@stats.{{key}}.value" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
                 </div>
                 {{/each}}
             </div>
@@ -82,7 +82,7 @@
                 <div class="ability flexrow flex-group-center">
                     <label for="data.roguerySkills.{{key}}.value" class="resource-label">{{key}}</label>
                     <input type="text" name="data.roguerySkills.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                    <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+                    <span class="ability-mod rollable" data-roll="d100+@stats.{{key}}.value" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
                 </div>
                 {{/each}}
             </div>
@@ -91,7 +91,7 @@
                 <div class="ability flexrow flex-group-center">
                     <label for="data.loreSkills.{{key}}.value" class="resource-label">{{key}}</label>
                     <input type="text" name="data.loreSkills.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                    <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+                    <span class="ability-mod rollable" data-roll="d100+@stats.{{key}}.value" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
                 </div>
                 {{/each}}
             </div>
@@ -100,7 +100,7 @@
                 <div class="ability flexrow flex-group-center">
                     <label for="data.bodySkills.{{key}}.value" class="resource-label">{{key}}</label>
                     <input type="text" name="data.bodySkills.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                    <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+                    <span class="ability-mod rollable" data-roll="d100+@stats.{{key}}.value" data-label="{{key}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
                 </div>
                 {{/each}}
             </div>
