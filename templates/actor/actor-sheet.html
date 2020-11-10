@@ -29,79 +29,14 @@
                   </div>
               </div>
           </div>
-          {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-          use both the "grid" and "grid-Ncol" class where "N" can be any number
-          from 1 to 12 and will create that number of columns.  --}}
-          <div class="abilities grid grid-3col">
-            {{#each data.abilities as |ability key|}}
-              <div class="ability flexrow flex-group-center">
-                <label for="data.stats.{{key}}.value" class="resource-label">{{key}}</label>
-                <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
-              </div>
-            {{/each}}
-          </div>
-            <div class="abilities grid grid-3col">
-                {{#each data.abilities as |ability key|}}
-                <div class="ability flexrow flex-group-center">
-                    <label for="data.saves.{{key}}.value" class="resource-label">{{key}}</label>
-                    <input type="text" name="data.saves.{{key}}.value" value="{{saves.value}}" data-dtype="Number"/>
-                </div>
-                {{/each}}
-            </div>
-            <div class="abilities grid grid-3col">
-                {{#each data.abilities as |ability key|}}
-                <div class="ability flexrow flex-group-center">
-                    <label for="data.armorSkills.{{key}}.value" class="resource-label">{{key}}</label>
-                    <input type="text" name="data.armorSkills.{{key}}.value" value="{{armorSkills.value}}" data-dtype="Number"/>
-                </div>
-                {{/each}}
-            </div>
-            <div class="abilities grid grid-3col">
-                {{#each data.abilities as |ability key|}}
-                <div class="ability flexrow flex-group-center">
-                    <label for="data.combatSkills.{{key}}.value" class="resource-label">{{key}}</label>
-                    <input type="text" name="data.combatSkills.{{key}}.value" value="{{combatSkills.value}}" data-dtype="Number"/>
-                </div>
-                {{/each}}
-            </div>
-            <div class="abilities grid grid-3col">
-                {{#each data.abilities as |ability key|}}
-                <div class="ability flexrow flex-group-center">
-                    <label for="data.adventuringSkills.{{key}}.value" class="resource-label">{{key}}</label>
-                    <input type="text" name="data.adventuringSkills.{{key}}.value" value="{{adventuringSkills.value}}" data-dtype="Number"/>
-                </div>
-                {{/each}}
-            </div>
-            <div class="abilities grid grid-3col">
-                {{#each data.abilities as |ability key|}}
-                <div class="ability flexrow flex-group-center">
-                    <label for="data.roguerySkills.{{key}}.value" class="resource-label">{{key}}</label>
-                    <input type="text" name="data.roguerySkills.{{key}}.value" value="{{roguerySkills.value}}" data-dtype="Number"/>
-                </div>
-                {{/each}}
-            </div>
-            <div class="abilities grid grid-3col">
-                {{#each data.abilities as |ability key|}}
-                <div class="ability flexrow flex-group-center">
-                    <label for="data.loreSkills.{{key}}.value" class="resource-label">{{key}}</label>
-                    <input type="text" name="data.loreSkills.{{key}}.value" value="{{loreSkills.value}}" data-dtype="Number"/>
-                </div>
-                {{/each}}
-            </div>
-            <div class="abilities grid grid-3col">
-                {{#each data.abilities as |ability key|}}
-                <div class="ability flexrow flex-group-center">
-                    <label for="data.bodySkills.{{key}}.value" class="resource-label">{{key}}</label>
-                    <input type="text" name="data.bodySkills.{{key}}.value" value="{{bodySkills.value}}" data-dtype="Number"/>
-                </div>
-                {{/each}}
-            </div>
+
         </div>
     </header>
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
+        <a class="item" data-tab="statistics">Statistics</a>
         <a class="item" data-tab="items">Items</a>
     </nav>
 
@@ -113,24 +48,14 @@
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
         </div>
         {{!-- Stats Tab --}}
-        <div class="tab stats" data-group="primary" data-tab="Statistics">
+        <div class="tab stats" data-group="primary" data-tab="statistics">
             <ol  class="stats-list">
-
-
-
                 <li  class="stats flexrow"  data-attribute="">
-
                     <span  class="attribute-label flexrow"  name="data.stats..label"></span>
-
                     <div  class="attribute-editbox flexrow">
-
                         <input  class="attribute-value"  type="text"  name="data.stats..value"  value=""  data-dtype="Number"  />
-
                     </div>
                 </li>
-
-
-
             </ol>
         </div>
         {{!-- Owned Items Tab --}}
