@@ -6,21 +6,29 @@
         "hitPoints": {
           "value": 30,
           "min": 0,
+          "label": "Hit Points",
+          "modifier": [],
           "max": 30
         },
         "meleeDefense": {
           "value": 5,
           "min": 0,
+          "label": "Melee Defense",
+          "modifier": [],
           "max": 5
         },
         "rangedDefense": {
           "value": 5,
           "min": 0,
+          "label": "Ranged Defense",
+          "modifier": [],
           "max": 5
         },
         "magicPoints": {
           "value": 0,
           "min": 0,
+          "label": "Magic Points",
+          "modifier": [],
           "max": 5
         }
              }
@@ -38,12 +46,16 @@
           "value": 0,
           "lvl": 0,
           "kin": 0,
+          "label": "Toughness(FOR)",
+          "modifier": [],
           "spec": 0
         },
         "willpower": {
           "value": 0,
           "lvl": 0,
           "kin": 0,
+          "label": "Willpower(WSD)",
+          "modifier": [],
           "spec": 0
                }
       },
@@ -52,36 +64,48 @@
           "value": 0,
           "base": 0,
           "kin": 0,
+          "label": "Brawn(BRN)",
+          "modifier": [],
           "spec": 0
         },
         "swi": {
           "value": 0,
           "base": 0,
           "kin": 0,
+          "label": "Swiftness(SWI)",
+          "modifier": [],
           "spec": 0
         },
         "for": {
           "value": 0,
           "base": 0,
           "kin": 0,
+          "label": "Fortitude(FOR)",
+          "modifier": [],
           "spec": 0
         },
         "wit": {
           "value": 0,
           "base": 0,
           "kin": 0,
+          "label": "Wits(WIT)",
+          "modifier": [],
           "spec": 0
         },
         "wsd": {
           "value": 0,
           "base": 0,
           "kin": 0,
+          "label": "Wisdom(WSD)",
+          "modifier": [],
           "spec": 0
         },
         "bea": {
           "value": 0,
           "base": 0,
           "kin": 0,
+          "label": "Bearing(BEA)",
+          "modifier": [],
           "spec": 0
         }
       },
@@ -95,6 +119,9 @@
             "item": 0,
             "voc": 0,
             "rank": 0,
+            "label": "Armor(no stat)",
+            "pStat": "",
+            "modifier": [],
             "rankBonus": 0
           }
         },
@@ -107,6 +134,9 @@
             "item": 0,
             "voc": 0,
             "rank": 0,
+            "label": "Blunt(BRN)",
+            "pStat": "data.stats.brn.value",
+            "modifier": [],
             "rankBonus": 0
           },
           "blades": {
@@ -117,6 +147,9 @@
             "item": 0,
             "voc": 0,
             "rank": 0,
+            "label": "Blades(BRN)",
+            "pStat": "data.stats.brn.value",
+            "modifier": [],
             "rankBonus": 0
           },
           "ranged": {
@@ -127,6 +160,9 @@
             "item": 0,
             "voc": 0,
             "rank": 0,
+            "label": "Ranged(SWI)",
+            "pStat": "data.stats.swi.value",
+            "modifier": [],
             "rankBonus": 0
           },
           "polearms": {
@@ -137,6 +173,9 @@
             "item": 0,
             "voc": 0,
             "rank": 0,
+            "label": "Polearms(BRN)",
+            "pStat": "data.stats.brn.value",
+            "modifier": [],
             "rankBonus": 0
           },
           "brawl": {
@@ -147,6 +186,9 @@
             "item": 0,
             "voc": 0,
             "rank": 0,
+            "label": "Brawl(BRN)",
+            "pStat": "data.stats.brn.value",
+            "modifier": [],
             "rankBonus": 0
           }
         },
@@ -159,6 +201,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Athletics(BRN)",
+          "pStat": "data.stats.brn.value",
+          "modifier": [],
           "rankBonus": 0
         },
         "ride": {
@@ -169,6 +214,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Ride(SWI)",
+          "pStat": "data.stats.swi.value",
+          "modifier": [],
           "rankBonus": 0
         },
         "hunting": {
@@ -179,6 +227,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Hunting(WIT)",
+          "pStat": "data.stats.wit.value",
+          "modifier": [],
           "rankBonus": 0
         },
         "nature": {
@@ -189,6 +240,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Nature(WSD)",
+          "pStat": "data.stats.wsd.value",
+          "modifier": [],
           "rankBonus": 0
         },
         "wandering": {
@@ -199,6 +253,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Wandering(WSD)",
+          "pStat": "data.stats.wsd.value",
+          "modifier": [],
           "rankBonus": 0
         }
       },
@@ -211,6 +268,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Acrobatics(SWI)",
+          "pStat": "data.stats.swi.value",
+          "modifier": [],
           "rankBonus": 0
         },
         "stealth": {
@@ -221,6 +281,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Stealth(SWI)",
+          "pStat": "data.stats.swi.value",
+          "modifier": [],
           "rankBonus": 0
         },
         "locksAndtraps": {
@@ -231,6 +294,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Locks&Traps(WIT)",
+          "pStat": "data.stats.wit.value",
+          "modifier": [],
           "rankBonus": 0
         },
         "perception": {
@@ -241,6 +307,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Perception(WSD)",
+          "pStat": "data.stats.wsd.value",
+          "modifier": [],
           "rankBonus": 0
         },
         "deceive": {
@@ -251,6 +320,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Deceive(WIT)",
+          "pStat": "data.stats.wit.value",
+          "modifier": [],
           "rankBonus": 0
         }
       },
@@ -263,6 +335,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Arcana(WIT)",
+          "pStat": "data.stats.wit.value",
+          "modifier": [],
           "rankBonus": 0
         },
         "charisma": {
@@ -273,6 +348,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Charisma(BEA)",
+          "pStat": "data.stats.bea.value",
+          "modifier": [],
           "rankBonus": 0
         },
         "cultures": {
@@ -283,6 +361,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Blunt(BRN)",
+          "pStat": "data.stats.brn.value",
+          "modifier": [],
           "rankBonus": 0
         },
         "healer": {
@@ -293,6 +374,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Healer(WSD)",
+          "pStat": "data.stats.wsd.value",
+          "modifier": [],
           "rankBonus": 0
         },
         "songAndtales": {
@@ -303,6 +387,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Song&Tales(BEA)",
+          "pStat": "data.stats.bea.value",
+          "modifier": [],
           "rankBonus": 0
         }
       },
@@ -315,6 +402,9 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
+          "label": "Body(FOR)",
+          "pStat": "data.stats.for.value",
+          "modifier": [],
           "rankBonus": 0
         }
       },
