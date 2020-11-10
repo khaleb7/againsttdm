@@ -38,9 +38,6 @@
         <a class="item" data-tab="description">Description</a>
         <a class="item" data-tab="statistics">Statistics</a>
         <a class="item" data-tab="skills">Skills</a>
-        <a class="item" data-tab="traits">Statistics</a>
-        <a class="item" data-tab="spells">Statistics</a>
-        <a class="item" data-tab="combat">Statistics</a>
         <a class="item" data-tab="items">Items</a>
         <a class="item" data-tab="detail">Statistics</a>
     </nav>
@@ -65,11 +62,37 @@
         <div class="armorskills grid grid-2col" data-group="primary" data-tab="skills">
             {{#each data.armorSkills as |armorSkills key|}}
             <div class="armorSkills flexrow flex-group-center">
-                <label for="data.armorSkills.{{key}}.value" class="resource-label">{{aromorSkills.label}}</label>
+                <label for="data.armorSkills.{{key}}.value" class="resource-label">{{armorSkills.label}}</label>
                 <input type="text" name="data.armorSkills.{{key}}.value" value="{{armorSkills.value}}" data-dtype="Number"/>
             </div>
             {{/each}}
+            {{#each data.combatSkills as |combatSkills key|}}
+            <div class="combatSkills flexrow flex-group-center">
+                <label for="data.combatSkills.{{key}}.value" class="resource-label">{{combatSkills.label}}</label>
+                <input type="text" name="data.combatSkills.{{key}}.value" value="{{combatSkills.value}}" data-dtype="Number"/>
+            </div>
+            {{/each}}
+            {{#each data.adventuringSkills as |adventuringSkills key|}}
+            <div class="adventuringSkills flexrow flex-group-center">
+                <label for="data.adventuringSkills.{{key}}.value" class="resource-label">{{adventuringSkills.label}}</label>
+                <input type="text" name="data.adventuringSkills.{{key}}.value" value="{{adventuringSkills.value}}" data-dtype="Number"/>
+            </div>
+            {{/each}}
+            {{#each data.roguerySkills as |roguerySkills key|}}
+            <div class="roguerySkills flexrow flex-group-center">
+                <label for="data.roguerySkills.{{key}}.value" class="resource-label">{{roguerySkills.label}}</label>
+                <input type="text" name="data.roguerySkills.{{key}}.value" value="{{roguerySkills.value}}" data-dtype="Number"/>
+            </div>
+            {{/each}}
+            {{#each data.loreSkills as |loreSkills key|}}
+            <div class="loreSkills flexrow flex-group-center">
+                <label for="data.loreSkills.{{key}}.value" class="resource-label">{{loreSkills.label}}</label>
+                <input type="text" name="data.loreSkills.{{key}}.value" value="{{loreSkills.value}}" data-dtype="Number"/>
+            </div>
+            {{/each}}
         </div>
+
+
 
 
 
