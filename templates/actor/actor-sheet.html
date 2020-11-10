@@ -48,12 +48,12 @@
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
         </div>
         {{!-- Stats Tab --}}
-        <div class="abilities grid grid-3col" data-group="primary" data-tab="statistics">
+        <div class="abilities grid grid-1col" data-group="primary" data-tab="statistics">
             {{#each data.stats as |stats key|}}
-            <div class="ability flexrow flex-group-center">
+            <div class="stats flexrow flex-group-center">
                 <label for="data.stats.{{key}}.value" class="resource-label">{{key}}</label>
                 <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
-                <span class="ability-mod">{{numberFormat stats.mod decimals=0 sign=true}}</span>
+                <span class="stats-base">{{numberFormat stats.base decimals=0 sign=true}}</span>
             </div>
             {{/each}}
         </div>
