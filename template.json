@@ -35,109 +35,287 @@
       },
       "saves": {
         "toughness": {
-          "value": 0
+          "value": 0,
+          "lvl": 0,
+          "kin": 0,
+          "spec": 0
         },
         "willpower": {
-          "value": 0
+          "value": 0,
+          "lvl": 0,
+          "kin": 0,
+          "spec": 0
                }
       },
       "stats": {
         "brn": {
-          "value": 0
+          "value": 0,
+          "base": 0,
+          "kin": 0,
+          "spec": 0
         },
         "swi": {
-          "value": 0
+          "value": 0,
+          "base": 0,
+          "kin": 0,
+          "spec": 0
         },
         "for": {
-          "value": 0
+          "value": 0,
+          "base": 0,
+          "kin": 0,
+          "spec": 0
         },
         "wit": {
-          "value": 0
+          "value": 0,
+          "base": 0,
+          "kin": 0,
+          "spec": 0
         },
         "wsd": {
-          "value": 0
+          "value": 0,
+          "base": 0,
+          "kin": 0,
+          "spec": 0
         },
         "bea": {
-          "value": 0
+          "value": 0,
+          "base": 0,
+          "kin": 0,
+          "spec": 0
         }
       },
 
         "armorSkills": {
           "armor": {
-            "value": 0
+            "value": 0,
+            "stat": 0,
+            "kin": 0,
+            "spec": 0,
+            "item": 0,
+            "voc": 0,
+            "rank": 0,
+            "rankBonus": 0
           }
         },
         "combatSkills": {
           "blunt": {
-            "value": 0
+            "value": 0,
+            "stat": 0,
+            "kin": 0,
+            "spec": 0,
+            "item": 0,
+            "voc": 0,
+            "rank": 0,
+            "rankBonus": 0
           },
           "blades": {
-            "value": 0
+            "value": 0,
+            "stat": 0,
+            "kin": 0,
+            "spec": 0,
+            "item": 0,
+            "voc": 0,
+            "rank": 0,
+            "rankBonus": 0
           },
           "ranged": {
-            "value": 0
+            "value": 0,
+            "stat": 0,
+            "kin": 0,
+            "spec": 0,
+            "item": 0,
+            "voc": 0,
+            "rank": 0,
+            "rankBonus": 0
           },
           "polearms": {
-            "value": 0
+            "value": 0,
+            "stat": 0,
+            "kin": 0,
+            "spec": 0,
+            "item": 0,
+            "voc": 0,
+            "rank": 0,
+            "rankBonus": 0
           },
           "brawl": {
-            "value": 0
+            "value": 0,
+            "stat": 0,
+            "kin": 0,
+            "spec": 0,
+            "item": 0,
+            "voc": 0,
+            "rank": 0,
+            "rankBonus": 0
           }
         },
       "adventuringSkills": {
         "athletics": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         },
         "ride": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         },
         "hunting": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         },
         "nature": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         },
         "wandering": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         }
       },
       "roguerySkills": {
         "acrobatics": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         },
         "stealth": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         },
         "locksAndtraps": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         },
         "perception": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         },
         "deceive": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         }
       },
       "loreSkills": {
         "arcana": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         },
         "charisma": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         },
         "cultures": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         },
         "healer": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         },
         "songAndtales": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         }
       },
       "bodySkills": {
         "body": {
-          "value": 0
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "rankBonus": 0
         }
       },
       "drivePoints": {
