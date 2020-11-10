@@ -3,13 +3,28 @@
     "types": ["character"],
     "templates": {
       "base": {
-        "health": {
-          "value": 10,
+        "hitPoints": {
+          "value": 30,
           "min": 0,
-          "max": 10
+          "max": 30
         },
-        "power": {
+        "meleeDefense": {
           "value": 5,
+          "min": 0,
+          "max": 5
+        },
+        "rangedDefense": {
+          "value": 5,
+          "min": 0,
+          "max": 5
+        },
+        "magicPoints": {
+          "value": 0,
+          "min": 0,
+          "max": 5
+        },
+        "drivePoints": {
+          "value": 0,
           "min": 0,
           "max": 5
         }
@@ -23,25 +38,13 @@
           "value": 1
         }
       },
-      "abilities": {
-        "str": {
-          "value": 10
+      "saves": {
+        "toughness": {
+          "value": 0
         },
-        "dex": {
-          "value": 10
-        },
-        "con": {
-          "value": 10
-        },
-        "int": {
-          "value": 10
-        },
-        "wis": {
-          "value": 10
-        },
-        "cha": {
-          "value": 10
-        }
+        "willpower": {
+          "value": 0
+               }
       }
     }
   },
