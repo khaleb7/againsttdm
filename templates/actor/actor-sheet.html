@@ -48,16 +48,17 @@
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
         </div>
         {{!-- Stats Tab --}}
-        <div class="tab stats" data-group="primary" data-tab="statistics">
-            <ol  class="stats-list">
-                <li  class="stats flexrow"  data-attribute="">
-                    <span  class="attribute-label flexrow"  name="data.stats..label"></span>
-                    <div  class="attribute-editbox flexrow">
-                        <input  class="attribute-value"  type="text"  name="data.stats..value"  value=""  data-dtype="Number"  />
-                    </div>
-                </li>
-            </ol>
+        <div class="abilities grid grid-3col" data-group="primary" data-tab="statistics">
+            {{#each data.stats as |stats key|}}
+            <div class="ability flexrow flex-group-center">
+                <label for="data.stats.{{key}}.value" class="resource-label">{{key}}</label>
+                <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
+                <span class="ability-mod">{{numberFormat stats.mod decimals=0 sign=true}}</span>
+            </div>
+            {{/each}}
         </div>
+        </div>
+        </header>
         {{!-- Owned Items Tab --}}
         <div class="tab items" data-group="primary" data-tab="items">
             <ol class="items-list">
