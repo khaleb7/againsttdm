@@ -21,7 +21,7 @@
                   </div>
               </div>
               <div class="resource flex-group-center">
-                  <label for="data.magicPoints.value" class="resource-label">Power</label>
+                  <label for="data.magicPoints.value" class="resource-label">Magic Points</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="data.magicPoints.value" value="{{data.magicPoints.value}}" data-dtype="Number"/>
                     <span> / </span>
@@ -37,7 +37,12 @@
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
         <a class="item" data-tab="statistics">Statistics</a>
+        <a class="item" data-tab="skills">Skills</a>
+        <a class="item" data-tab="traits">Statistics</a>
+        <a class="item" data-tab="spells">Statistics</a>
+        <a class="item" data-tab="combat">Statistics</a>
         <a class="item" data-tab="items">Items</a>
+        <a class="item" data-tab="detail">Statistics</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -48,17 +53,54 @@
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
         </div>
         {{!-- Stats Tab --}}
-        <div class="abilities grid grid-1col" data-group="primary" data-tab="statistics">
+        <div class="abilities grid grid-2col" data-group="primary" data-tab="statistics">
             {{#each data.stats as |stats key|}}
             <div class="stats flexrow flex-group-center">
-                <label for="data.stats.{{key}}.value" class="resource-label">{{key}}</label>
+                <label for="data.stats.{{key}}.value" class="resource-label">{{stats.label}}</label>
                 <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
-                <span class="stats-base">{{numberFormat stats.base decimals=0 sign=true}}</span>
             </div>
             {{/each}}
         </div>
+        {{!-- Skills Tab --}}
+        <div class="armorskills grid grid-2col" data-group="primary" data-tab="skills">
+            {{#each data.armorSkills as |armorSkills key|}}
+            <div class="armorSkills flexrow flex-group-center">
+                <label for="data.armorSkills.{{key}}.value" class="resource-label">{{aromorSkills.label}}</label>
+                <input type="text" name="data.armorSkills.{{key}}.value" value="{{armorSkills.value}}" data-dtype="Number"/>
+            </div>
+            {{/each}}
         </div>
-        </header>
+
+
+
+        {{!-- Traits Tab --}}
+        <div class="traits grid grid-2col" data-group="primary" data-tab="traits">
+            {{#each data.stats as |stats key|}}
+            <div class="stats flexrow flex-group-center">
+                <label for="data.stats.{{key}}.value" class="resource-label">{{stats.label}}</label>
+                <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
+            </div>
+            {{/each}}
+        </div>
+        {{!-- Stats Tab --}}
+        <div class="abilities grid grid-2col" data-group="primary" data-tab="spells">
+            {{#each data.stats as |stats key|}}
+            <div class="stats flexrow flex-group-center">
+                <label for="data.stats.{{key}}.value" class="resource-label">{{stats.label}}</label>
+                <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
+            </div>
+            {{/each}}
+        </div>
+        {{!-- Stats Tab --}}
+        <div class="abilities grid grid-2col" data-group="primary" data-tab="combat">
+            {{#each data.stats as |stats key|}}
+            <div class="stats flexrow flex-group-center">
+                <label for="data.stats.{{key}}.value" class="resource-label">{{stats.label}}</label>
+                <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
+            </div>
+            {{/each}}
+        </div>
+
         {{!-- Owned Items Tab --}}
         <div class="tab items" data-group="primary" data-tab="items">
             <ol class="items-list">
