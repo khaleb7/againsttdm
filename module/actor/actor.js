@@ -40,7 +40,7 @@ export class againstTdmActor extends Actor {
         combatSkills.stat = data.stats.wit.value;
       }else if (combatSkills.pStat === 'data.stats.wsd.value') {
         combatSkills.stat = data.stats.wsd.value;
-      }else (combatSkills.pStat === 'data.stats.bea.value') {
+      }else {
         combatSkills.stat = data.stats.bea.value;
       }
     }
@@ -56,7 +56,7 @@ export class againstTdmActor extends Actor {
         armorSkills.stat = data.stats.wit.value;
       }else if (armorSkills.pStat === 'data.stats.wsd.value') {
         armorSkills.stat = data.stats.wsd.value;
-      }else (armorSkills.pStat === 'data.stats.bea.value') {
+      }else  {
         armorSkills.stat = data.stats.bea.value;
       }
     }
@@ -72,7 +72,7 @@ export class againstTdmActor extends Actor {
         adventuringSkills.stat = data.stats.wit.value;
       }else if (adventuringSkills.pStat === 'data.stats.wsd.value') {
         adventuringSkills.stat = data.stats.wsd.value;
-      }else (adventuringSkills.pStat === 'data.stats.bea.value') {
+      }else {
         adventuringSkills.stat = data.stats.bea.value;
       }
     }
@@ -88,7 +88,7 @@ export class againstTdmActor extends Actor {
         roguerySkills.stat = data.stats.wit.value;
       }else if (roguerySkills.pStat === 'data.stats.wsd.value') {
         roguerySkills.stat = data.stats.wsd.value;
-      }else (combatSkills.pStat === 'data.stats.bea.value') {
+      }else  {
         roguerySkills.stat = data.stats.bea.value;
       }
     }
@@ -104,7 +104,7 @@ export class againstTdmActor extends Actor {
         loreSkills.stat = data.stats.wit.value;
       }else if (loreSkills.pStat === 'data.stats.wsd.value') {
         loreSkills.stat = data.stats.wsd.value;
-      }else (loreSkills.pStat === 'data.stats.bea.value') {
+      }else {
         loreSkills.stat = data.stats.bea.value;
       }
     }
@@ -120,7 +120,7 @@ export class againstTdmActor extends Actor {
         bodySkills.stat = data.stats.wit.value;
       }else if (bodySkills.pStat === 'data.stats.wsd.value') {
         bodySkills.stat = data.stats.wsd.value;
-      }else (bodySkills.pStat === 'data.stats.bea.value') {
+      }else  {
         bodySkills.stat = data.stats.bea.value;
       }
     }
