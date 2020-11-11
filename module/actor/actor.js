@@ -32,10 +32,10 @@ export class againstTdmActor extends Actor {
       //
       if(combatSkills.pStat === 'data.stats.brn.value') {
         combatSkills.stat = data.stats.brn.value;
-        console.log(key,combatSkill.stat);
+        console.log(key,combatSkills.stat);
       } else if (combatSkills.pStat === 'data.stats.swi.value') {
         combatSkills.stat = data.stats.swi.value;
-        console.log(key,combatSkill.stat);
+        console.log(key,combatSkills.stat);
       } else combatSkills.stat = 9;
       console.log(key,combatSkills.stat);
     }
