@@ -2,18 +2,18 @@
 
     {{!-- Sheet Header --}}
     <header class="sheet-header">
-        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="150" width="100"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
             {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
             use both the "grid" and "grid-Ncol" class where "N" can be any number
             from 1 to 12 and will create that number of columns.  --}}
-            <div class="resources grid grid-2col">
+            <div class="resources grid grid-4col">
               {{!-- "flex-group-center" is also defined in the _grid.scss file
               and it will add a small amount of padding, a border, and will
               center all of its child elements content and text. --}}
               <div class="resource flex-group-center">
-                  <label for="data.hitPoints.value" class="attribute-label">Hit Points</label>
+                  <label for="data.hitPoints.value" class="attribute-label">HP</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="data.hitPoints.value" value="{{data.hitPoints.value}}" data-dtype="Number"/>
                     <span> / </span>
@@ -21,22 +21,29 @@
                   </div>
               </div>
               <div class="resource flex-group-center">
-                  <label for="data.magicPoints.value" class="attribute-label">Magic Points</label>
+                  <label for="data.magicPoints.value" class="attribute-label">Magic</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="data.magicPoints.value" value="{{data.magicPoints.value}}" data-dtype="Number"/>
                     <span> / </span>
                     <input type="text" name="data.magicPoints.max" value="{{data.magicPoints.max}}" data-dtype="Number"/>
                   </div>
               </div>
-          </div>
-            <div class="abilities grid grid-3col" data-group="primary" data-tab="statistics">
-                {{#each data.stats as |stats key|}}
-                <div class="stats flexrow flex-group-center">
-                    <label for="data.stats.{{key}}.value" class="attribute-label">{{stats.label}}</label>
-                    <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
+                <div class="resource flex-group-left">
+                    <label for="data.moveRate.value" class="attribute-label">Move</label>
+                    <div class="resource-content flexrow flex-center flex-group-center">
+                        <input type="text" name="data.moveRate.value" value="{{data.moveRate.value}}" data-dtype="Number"/>
+                    </div>
                 </div>
-                {{/each}}
-            </div>
+                <div class="resource flex-group-left">
+                    <label for="data.defense.value" class="attribute-label">Defense</label>
+                    <div class="resource-content flexrow flex-center flex-group-center">
+                        <input type="text" name="data.defense.value" value="{{data.defense.value}}" data-dtype="Number"/>
+                    </div>
+                </div>
+
+
+          </div>
+
 
         </div>
     </header>
@@ -44,7 +51,7 @@
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="skills">Skills</a>
+        <a class="item" data-tab="skills">Details</a>
         <a class="item" data-tab="items">Items</a>
     </nav>
 
@@ -57,7 +64,16 @@
         </div>
         {{!-- Stats Tab --}}
 
-          <div class="skills" data-group="primary" data-tab="Skills">
+
+          <div class="detail" data-group="primary" data-tab="Details">
+              <div class="abilities grid grid-3col" data-group="primary" data-tab="statistics">
+                  {{#each data.stats as |stats key|}}
+                  <div class="stats flexrow flex-group-center">
+                      <label for="data.stats.{{key}}.value" class="attribute-label">{{stats.label}}</label>
+                      <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
+                  </div>
+                  {{/each}}
+              </div>
               <br><label  class="attribute-label"> Armor </label>
               <div class="loreLegend flexrow flex-group-left">
                   <label>  </label>
@@ -200,7 +216,7 @@
         </div>
     </div>
         {{!-- Owned Items Tab --}}
-    <div class="tab items" data-group="primary" data-tab="items">
+    <div class="tab items" data-group="secondary" data-tab="items">
             <ol class="items-list">
                 <li class="item flexrow item-header">
                   <div class="item-image"></div>
