@@ -57,7 +57,7 @@ export class againstTdmActor extends Actor {
       }else if (armorSkills.pStat === 'data.stats.wsd.value') {
         armorSkills.stat = data.stats.wsd.value;
       }else  {
-        armorSkills.stat = data.stats.bea.value;
+        armorSkills.stat = 0;
       }
     }
     for (let [key, adventuringSkills] of Object.entries(data.adventuringSkills)) {
