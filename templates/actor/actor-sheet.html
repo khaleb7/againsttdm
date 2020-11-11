@@ -13,7 +13,7 @@
               and it will add a small amount of padding, a border, and will
               center all of its child elements content and text. --}}
               <div class="resource flex-group-center">
-                  <label for="data.hitPoints.value" class="resource-label">HitPoints</label>
+                  <label for="data.hitPoints.value" class="attribute-label">Hit Points</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="data.hitPoints.value" value="{{data.hitPoints.value}}" data-dtype="Number"/>
                     <span> / </span>
@@ -21,7 +21,7 @@
                   </div>
               </div>
               <div class="resource flex-group-center">
-                  <label for="data.magicPoints.value" class="resource-label">Magic Points</label>
+                  <label for="data.magicPoints.value" class="attribute-label">Magic Points</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="data.magicPoints.value" value="{{data.magicPoints.value}}" data-dtype="Number"/>
                     <span> / </span>
@@ -29,6 +29,14 @@
                   </div>
               </div>
           </div>
+            <div class="abilities grid grid-3col" data-group="primary" data-tab="statistics">
+                {{#each data.stats as |stats key|}}
+                <div class="stats flexrow flex-group-center">
+                    <label for="data.stats.{{key}}.value" class="attribute-label">{{stats.label}}</label>
+                    <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
+                </div>
+                {{/each}}
+            </div>
 
         </div>
     </header>
@@ -36,7 +44,7 @@
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="statistics">Statistics</a>
+        <a class="item" data-tab="skills">skills</a>
         <a class="item" data-tab="items">Items</a>
     </nav>
 
@@ -48,18 +56,8 @@
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
         </div>
         {{!-- Stats Tab --}}
-        <label  class="attribute-label"> Stats </label>
 
-        <div class="abilities grid grid-1col" data-group="primary" data-tab="statistics">
-            {{#each data.stats as |stats key|}}
-            <div class="stats flexrow flex-group-center">
-                <label for="data.stats.{{key}}.value" class="resource-label">{{stats.label}}</label>
-                <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
-            </div>
-            {{/each}}
-        </div>
-    </div>
-        <div class="skills" data-group="primary" data-tab="skills">
+          <div class="skills" data-group="primary" data-tab="skills">
             <br><label  class="attribute-label"> Armor </label>
             {{#each data.armorSkills as |armorSkills key|}}
             <div class="armorSkills flexrow flex-group-left">
