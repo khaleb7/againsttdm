@@ -59,11 +59,11 @@
             {{/each}}
         </div>
     </div>
-        <div class="armorskills" data-group="primary" data-tab="skills">
+        <div class="skills" data-group="primary" data-tab="skills">
             <br><label  class="attribute-label"> Armor </label>
             {{#each data.armorSkills as |armorSkills key|}}
             <div class="armorSkills flexrow flex-group-left">
-                <label for="data.armorSkills.{{key}}.value" class="resource-label">{{armorSkills.label}}</label>
+                <label for="data.armorSkills.{{key}}.value" class="attribute-label">{{armorSkills.label}}</label>
                 <label> Stat </label><input type="text" name="data.armorSkills.{{key}}.stat" value="{{armorSkills.stat}}" data-dtype="Number"/>
                 <label> #Ranks </label><input type="text" name="data.armorSkills.{{key}}.rank" value="{{armorSkills.rank}}" data-dtype="Number"/>
                 <label> Bonus </label><input type="text" name="data.armorSkills.{{key}}.rankBonus" value="{{armorSkills.rankBonus}}" data-dtype="Number"/>
@@ -75,54 +75,54 @@
             {{/each}}
             <br><label  class="attribute-label"> Combat </label>
             {{#each data.combatSkills as |combatSkills key|}}
-            <div class="combatSkills grid grid-1col">
-                <label for="data.combatSkills.{{key}}.value" class="resource-label">{{combatSkills.label}}</label>
-                <input type="text" name="data.combatSkills.{{key}}.stat" value="{{armorSkills.stat}}" data-dtype="Number"/>
-                <input type="text" name="data.combatSkills.{{key}}.rank" value="{{armorSkills.rank}}" data-dtype="Number"/>
-                <input type="text" name="data.combatSkills.{{key}}.rankBonus" value="{{armorSkills.rankBonus}}" data-dtype="Number"/>
-                <input type="text" name="data.combatSkills.{{key}}.kin" value="{{armorSkills.kin}}" data-dtype="Number"/>
-                <input type="text" name="data.combatSkills.{{key}}.spec" value="{{armorSkills.spec}}" data-dtype="Number"/>
-                <input type="text" name="data.combatSkills.{{key}}.item" value="{{armorSkills.item}}" data-dtype="Number"/>
-                <input type="text" name="data.combatSkills.{{key}}.value" value="{{combatSkills.value}}" data-dtype="Number"/>
+            <div class="combatSkills flexrow flex-group-left">
+                <label for="data.combatSkills.{{key}}.value" class="attribute-label">{{combatSkills.label}}</label>
+                <label> Stat </label><input type="text" name="data.combatSkills.{{key}}.stat" value="{{combatSkills.stat}}" data-dtype="Number"/>
+                <label> #Ranks </label><input type="text" name="data.combatSkills.{{key}}.rank" value="{{combatSkills.rank}}" data-dtype="Number"/>
+                <label> Bonus </label><input type="text" name="data.combatSkills.{{key}}.rankBonus" value="{{combatSkills.rankBonus}}" data-dtype="Number"/>
+                <label> Kin </label><input type="text" name="data.combatSkills.{{key}}.kin" value="{{combatSkills.kin}}" data-dtype="Number"/>
+                <label> Spec </label><input type="text" name="data.combatSkills.{{key}}.spec" value="{{combatSkills.spec}}" data-dtype="Number"/>
+                <label> Item </label><input type="text" name="data.combatSkills.{{key}}.item" value="{{combatSkills.item}}" data-dtype="Number"/>
+                <label> TOT </label><input type="text" name="data.combatSkills.{{key}}.value" value="{{combatSkills.value}}" data-dtype="Number"/>
             </div>
             {{/each}}
             <br><label  class="attribute-label"> Adventuring </label>
             {{#each data.adventuringSkills as |adventuringSkills key|}}
-            <div class="adventuringSkills grid grid-1col">
+            <div class="adventuringSkills flexrow flex-group-left">
                 <label for="data.adventuringSkills.{{key}}.value" class="resource-label">{{adventuringSkills.label}}</label>
-                <input type="text" name="data.adventuringSkills.{{key}}.stat" value="{{armorSkills.stat}}" data-dtype="Number"/>
-                <input type="text" name="data.adventuringSkills.{{key}}.rank" value="{{armorSkills.rank}}" data-dtype="Number"/>
-                <input type="text" name="data.adventuringSkills.{{key}}.rankBonus" value="{{armorSkills.rankBonus}}" data-dtype="Number"/>
-                <input type="text" name="data.adventuringSkills.{{key}}.kin" value="{{armorSkills.kin}}" data-dtype="Number"/>
-                <input type="text" name="data.adventuringSkills.{{key}}.spec" value="{{armorSkills.spec}}" data-dtype="Number"/>
-                <input type="text" name="data.adventuringSkills.{{key}}.item" value="{{armorSkills.item}}" data-dtype="Number"/>
-                <input type="text" name="data.adventuringSkills.{{key}}.value" value="{{adventuringSkills.value}}" data-dtype="Number"/>
+                <label> Stat </label><input type="text" name="data.adventuringSkills.{{key}}.stat" value="{{adventuringSkills.stat}}" data-dtype="Number"/>
+                <label> #Ranks </label><input type="text" name="data.adventuringSkills.{{key}}.rank" value="{{adventuringSkills.rank}}" data-dtype="Number"/>
+                <label> Bonus </label><input type="text" name="data.adventuringSkills.{{key}}.rankBonus" value="{{adventuringSkills.rankBonus}}" data-dtype="Number"/>
+                <label> Kin </label><input type="text" name="data.adventuringSkills.{{key}}.kin" value="{{adventuringSkills.kin}}" data-dtype="Number"/>
+                <label> Spec </label><input type="text" name="data.adventuringSkills.{{key}}.spec" value="{{adventuringSkills.spec}}" data-dtype="Number"/>
+                <label> Item </label><input type="text" name="data.adventuringSkills.{{key}}.item" value="{{adventuringSkills.item}}" data-dtype="Number"/>
+                <label> TOT </label><input type="text" name="data.adventuringSkills.{{key}}.value" value="{{adventuringSkills.value}}" data-dtype="Number"/>
             </div>
             {{/each}}
             <br><label  class="attribute-label"> Roguery </label>
             {{#each data.roguerySkills as |roguerySkills key|}}
             <div class="roguerySkills grid grid-1col">
                 <label for="data.roguerySkills.{{key}}.value" class="resource-label">{{roguerySkills.label}}</label>
-                <input type="text" name="data.roguerySkills.{{key}}.stat" value="{{armorSkills.stat}}" data-dtype="Number"/>
-                <input type="text" name="data.roguerySkills.{{key}}.rank" value="{{armorSkills.rank}}" data-dtype="Number"/>
-                <input type="text" name="data.roguerySkills.{{key}}.rankBonus" value="{{armorSkills.rankBonus}}" data-dtype="Number"/>
-                <input type="text" name="data.roguerySkills.{{key}}.kin" value="{{armorSkills.kin}}" data-dtype="Number"/>
-                <input type="text" name="data.roguerySkills.{{key}}.spec" value="{{armorSkills.spec}}" data-dtype="Number"/>
-                <input type="text" name="data.roguerySkills.{{key}}.item" value="{{armorSkills.item}}" data-dtype="Number"/>
-                <input type="text" name="data.roguerySkills.{{key}}.value" value="{{roguerySkills.value}}" data-dtype="Number"/>
+                <label> Stat </label><input type="text" name="data.roguerySkills.{{key}}.stat" value="{{roguerySkills.stat}}" data-dtype="Number"/>
+                <label> #Ranks </label><input type="text" name="data.roguerySkills.{{key}}.rank" value="{{roguerySkills.rank}}" data-dtype="Number"/>
+                <label> Bonus </label><input type="text" name="data.roguerySkills.{{key}}.rankBonus" value="{{roguerySkills.rankBonus}}" data-dtype="Number"/>
+                <label> Kin </label><input type="text" name="data.roguerySkills.{{key}}.kin" value="{{roguerySkills.kin}}" data-dtype="Number"/>
+                <label> Spec </label><input type="text" name="data.roguerySkills.{{key}}.spec" value="{{roguerySkills.spec}}" data-dtype="Number"/>
+                <label> Item </label><input type="text" name="data.roguerySkills.{{key}}.item" value="{{roguerySkills.item}}" data-dtype="Number"/>
+                <label> TOT </label><input type="text" name="data.roguerySkills.{{key}}.value" value="{{roguerySkills.value}}" data-dtype="Number"/>
             </div>
             {{/each}}
             <br><label  class="attribute-label"> Lore </label>
             {{#each data.loreSkills as |loreSkills key|}}
             <div class="loreSkills grid grid-1col">
                 <label for="data.loreSkills.{{key}}.value" class="resource-label">{{loreSkills.label}}</label>
-                <input type="text" name="data.loreSkills.{{key}}.stat" value="{{armorSkills.stat}}" data-dtype="Number"/>
-                <input type="text" name="data.loreSkills.{{key}}.rank" value="{{armorSkills.rank}}" data-dtype="Number"/>
-                <input type="text" name="data.loreSkills.{{key}}.rankBonus" value="{{armorSkills.rankBonus}}" data-dtype="Number"/>
-                <input type="text" name="data.loreSkills.{{key}}.kin" value="{{armorSkills.kin}}" data-dtype="Number"/>
-                <input type="text" name="data.loreSkills.{{key}}.spec" value="{{armorSkills.spec}}" data-dtype="Number"/>
-                <input type="text" name="data.loreSkills.{{key}}.item" value="{{armorSkills.item}}" data-dtype="Number"/>
-                <input type="text" name="data.loreSkills.{{key}}.value" value="{{loreSkills.value}}" data-dtype="Number"/>
+                <label> Stat </label><input type="text" name="data.loreSkills.{{key}}.stat" value="{{loreSkills.stat}}" data-dtype="Number"/>
+                <label> #Ranks </label><input type="text" name="data.loreSkills.{{key}}.rank" value="{{loreSkills.rank}}" data-dtype="Number"/>
+                <label> Bonus </label><input type="text" name="data.loreSkills.{{key}}.rankBonus" value="{{loreSkills.rankBonus}}" data-dtype="Number"/>
+                <label> Kin </label><input type="text" name="data.loreSkills.{{key}}.kin" value="{{loreSkills.kin}}" data-dtype="Number"/>
+                <label> Spec </label><input type="text" name="data.loreSkills.{{key}}.spec" value="{{loreSkills.spec}}" data-dtype="Number"/>
+                <label> Item </label><input type="text" name="data.loreSkills.{{key}}.item" value="{{loreSkills.item}}" data-dtype="Number"/>
+                <label> TOT </label><input type="text" name="data.loreSkills.{{key}}.value" value="{{loreSkills.value}}" data-dtype="Number"/>
             </div>
             {{/each}}
 
@@ -130,13 +130,13 @@
             {{#each data.bodySkills as |bodySkills key|}}
             <div class="loreSkills grid grid-1col">
                 <label for="data.bodySkills.{{key}}.value" class="resource-label">{{bodySkills.label}}</label>
-                <input type="text" name="data.bodySkills.{{key}}.stat" value="{{armorSkills.stat}}" data-dtype="Number"/>
-                <input type="text" name="data.bodySkills.{{key}}.rank" value="{{armorSkills.rank}}" data-dtype="Number"/>
-                <input type="text" name="data.bodySkills.{{key}}.rankBonus" value="{{armorSkills.rankBonus}}" data-dtype="Number"/>
-                <input type="text" name="data.bodySkills.{{key}}.kin" value="{{armorSkills.kin}}" data-dtype="Number"/>
-                <input type="text" name="data.bodySkills.{{key}}.spec" value="{{armorSkills.spec}}" data-dtype="Number"/>
-                <input type="text" name="data.bodySkills.{{key}}.item" value="{{armorSkills.item}}" data-dtype="Number"/>
-                <input type="text" name="data.bodySkills.{{key}}.value" value="{{bodySkills.value}}" data-dtype="Number"/>
+                <label> Stat </label><input type="text" name="data.bodySkills.{{key}}.stat" value="{{bodySkills.stat}}" data-dtype="Number"/>
+                <label> #Ranks </label><input type="text" name="data.bodySkills.{{key}}.rank" value="{{bodySkills.rank}}" data-dtype="Number"/>
+                <label> Bonus </label><input type="text" name="data.bodySkills.{{key}}.rankBonus" value="{{bodySkills.rankBonus}}" data-dtype="Number"/>
+                <label> Kin </label><input type="text" name="data.bodySkills.{{key}}.kin" value="{{bodySkills.kin}}" data-dtype="Number"/>
+                <label> Spec </label><input type="text" name="data.bodySkills.{{key}}.spec" value="{{bodySkills.spec}}" data-dtype="Number"/>
+                <label> Item </label><input type="text" name="data.bodySkills.{{key}}.item" value="{{bodySkills.item}}" data-dtype="Number"/>
+                <label> TOT </label><input type="text" name="data.bodySkills.{{key}}.value" value="{{bodySkills.value}}" data-dtype="Number"/>
             </div>
             {{/each}}
         </div>
