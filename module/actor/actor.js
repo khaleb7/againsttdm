@@ -30,12 +30,17 @@ export class againstTdmActor extends Actor {
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, combatSkills] of Object.entries(data.combatSkills)) {
       //
-      if(combatSkills.pStat === 'data.stats.wsd.value') {
-        combatSkills.stat = data.stats.wsd.value;
-        console.log(combatSkill.stat)
-      }
-
+      if(combatSkills.pStat === 'data.stats.brn.value') {
+        combatSkills.stat = data.stats.brn.value;
+        console.log(key,combatSkill.stat);
+      } else if (combatSkills.pStat === 'data.stats.swi.value') {
+        combatSkills.stat = data.stats.swi.value;
+        console.log(key,combatSkill.stat);
+      } else combatSkills.stat = 9;
+      console.log(key,combatSkills.stat);
     }
+
+
 
   }
 
