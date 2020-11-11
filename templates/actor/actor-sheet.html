@@ -89,7 +89,7 @@
             <br><label  class="attribute-label"> Adventuring </label>
             {{#each data.adventuringSkills as |adventuringSkills key|}}
             <div class="adventuringSkills flexrow flex-group-left">
-                <label for="data.adventuringSkills.{{key}}.value" class="resource-label">{{adventuringSkills.label}}</label>
+                <label for="data.adventuringSkills.{{key}}.value" class="attribute-label">{{adventuringSkills.label}}</label>
                 <label> Stat </label><input type="text" name="data.adventuringSkills.{{key}}.stat" value="{{adventuringSkills.stat}}" data-dtype="Number"/>
                 <label> #Ranks </label><input type="text" name="data.adventuringSkills.{{key}}.rank" value="{{adventuringSkills.rank}}" data-dtype="Number"/>
                 <label> Bonus </label><input type="text" name="data.adventuringSkills.{{key}}.rankBonus" value="{{adventuringSkills.rankBonus}}" data-dtype="Number"/>
@@ -101,8 +101,8 @@
             {{/each}}
             <br><label  class="attribute-label"> Roguery </label>
             {{#each data.roguerySkills as |roguerySkills key|}}
-            <div class="roguerySkills grid grid-1col">
-                <label for="data.roguerySkills.{{key}}.value" class="resource-label">{{roguerySkills.label}}</label>
+            <div class="roguerySkills flexrow flex-group-left">
+                <label for="data.roguerySkills.{{key}}.value" class="attribute-label">{{roguerySkills.label}}</label>
                 <label> Stat </label><input type="text" name="data.roguerySkills.{{key}}.stat" value="{{roguerySkills.stat}}" data-dtype="Number"/>
                 <label> #Ranks </label><input type="text" name="data.roguerySkills.{{key}}.rank" value="{{roguerySkills.rank}}" data-dtype="Number"/>
                 <label> Bonus </label><input type="text" name="data.roguerySkills.{{key}}.rankBonus" value="{{roguerySkills.rankBonus}}" data-dtype="Number"/>
@@ -114,8 +114,8 @@
             {{/each}}
             <br><label  class="attribute-label"> Lore </label>
             {{#each data.loreSkills as |loreSkills key|}}
-            <div class="loreSkills grid grid-1col">
-                <label for="data.loreSkills.{{key}}.value" class="resource-label">{{loreSkills.label}}</label>
+            <div class="loreSkills flexrow flex-group-left">
+                <label for="data.loreSkills.{{key}}.value" class="attribute-label">{{loreSkills.label}}</label>
                 <label> Stat </label><input type="text" name="data.loreSkills.{{key}}.stat" value="{{loreSkills.stat}}" data-dtype="Number"/>
                 <label> #Ranks </label><input type="text" name="data.loreSkills.{{key}}.rank" value="{{loreSkills.rank}}" data-dtype="Number"/>
                 <label> Bonus </label><input type="text" name="data.loreSkills.{{key}}.rankBonus" value="{{loreSkills.rankBonus}}" data-dtype="Number"/>
@@ -128,8 +128,8 @@
 
             <br><label  class="attribute-label"> Body </label>
             {{#each data.bodySkills as |bodySkills key|}}
-            <div class="loreSkills grid grid-1col">
-                <label for="data.bodySkills.{{key}}.value" class="resource-label">{{bodySkills.label}}</label>
+            <div class="loreSkills flexrow flex-group-left">
+                <label for="data.bodySkills.{{key}}.value" class="attribute-label">{{bodySkills.label}}</label>
                 <label> Stat </label><input type="text" name="data.bodySkills.{{key}}.stat" value="{{bodySkills.stat}}" data-dtype="Number"/>
                 <label> #Ranks </label><input type="text" name="data.bodySkills.{{key}}.rank" value="{{bodySkills.rank}}" data-dtype="Number"/>
                 <label> Bonus </label><input type="text" name="data.bodySkills.{{key}}.rankBonus" value="{{bodySkills.rankBonus}}" data-dtype="Number"/>
