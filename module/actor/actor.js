@@ -25,9 +25,12 @@ export class againstTdmActor extends Actor {
   _prepareCharacterData(actorData) {
     const data = actorData.data;
     data.stats
-    // Make modifications to data here. For example:
+    // Function to calculate TOT. This is invoked after the for loop to determine base stat value for a skill.
+    const calcTot = (sBonus,rBonus,vBonus,kBonus,sBonus,iBonus) => {
+      return Number(sBonus) + Number(rBonus) + Number(vBonus) + Number(kBonus) + Number(sBonus) + Number(iBonus);
 
-    // Loop through ability scores, and add their modifiers to our sheet output.
+    }
+    // Loop through stats and update derived values.
     for (let [key, combatSkills] of Object.entries(data.combatSkills)) {
       //
       if(combatSkills.pStat === 'data.stats.brn.value') {
@@ -43,6 +46,8 @@ export class againstTdmActor extends Actor {
       }else {
         combatSkills.stat = data.stats.bea.value;
       }
+      combatSkills.value = calcTot(combatSkills.stat,combatSkills.rankBonus,combatSkills.voc,combatSkills.kin,combatSkills.spec,combatSkills.item);
+      
     }
     for (let [key, armorSkills] of Object.entries(data.armorSkills)) {
       //
@@ -59,6 +64,8 @@ export class againstTdmActor extends Actor {
       }else  {
         armorSkills.stat = 0;
       }
+      armorSkills.value = calcTot(armorSkills.stat,armorSkills.rankBonus,armorSkills.voc,armorSkills.kin,armorSkills.spec,armorSkills.item);
+
     }
     for (let [key, adventuringSkills] of Object.entries(data.adventuringSkills)) {
       //
@@ -75,6 +82,8 @@ export class againstTdmActor extends Actor {
       }else {
         adventuringSkills.stat = data.stats.bea.value;
       }
+      adventuringSkills.value = calcTot(adventuringSkills.stat,adventuringSkills.rankBonus,adventuringSkills.voc,adventuringSkills.kin,adventuringSkills.spec,adventuringSkills.item);
+
     }
     for (let [key, roguerySkills] of Object.entries(data.roguerySkills)) {
       //
@@ -91,6 +100,8 @@ export class againstTdmActor extends Actor {
       }else  {
         roguerySkills.stat = data.stats.bea.value;
       }
+      roguerySkills.value = calcTot(roguerySkills.stat,roguerySkills.rankBonus,roguerySkills.voc,roguerySkills.kin,roguerySkills.spec,roguerySkills.item);
+
     }
     for (let [key, loreSkills] of Object.entries(data.loreSkills)) {
       //
@@ -107,6 +118,8 @@ export class againstTdmActor extends Actor {
       }else {
         loreSkills.stat = data.stats.bea.value;
       }
+      loreSkills.value = calcTot(loreSkills.stat,loreSkills.rankBonus,loreSkills.voc,loreSkills.kin,loreSkills.spec,loreSkills.item);
+
     }
     for (let [key, bodySkills] of Object.entries(data.bodySkills)) {
       //
@@ -123,6 +136,8 @@ export class againstTdmActor extends Actor {
       }else  {
         bodySkills.stat = data.stats.bea.value;
       }
+      bodySkills.value = calcTot(bodySkills.stat,bodySkills.rankBonus,bodySkills.voc,bodySkills.kin,bodySkills.spec,bodySkills.item);
+
     }
   }
 
