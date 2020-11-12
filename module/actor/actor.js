@@ -26,7 +26,7 @@ export class againstTdmActor extends Actor {
     const data = actorData.data;
     data.stats
     // Function to calculate TOT. This is invoked after the for loop to determine base stat value for a skill.
-    const calcTot = (sBonus,rBonus,vBonus,kBonus,sBonus,iBonus) => {
+    const calcTot = (sBonus,rBonus,vBonus,kBonus,specBonus,iBonus) => {
       return Number(sBonus) + Number(rBonus) + Number(vBonus) + Number(kBonus) + Number(sBonus) + Number(iBonus);
 
     }
