@@ -32,9 +32,9 @@ export class againstTdmActor extends Actor {
     }
     // Loop through stats and update derived values.
 
-    for (let [key, combatSkills] of Object.entries(data.combatSkills)) {
+    for (let [key, stats] of Object.entries(data.stats)) {
       stats.value = calcTot(stats.base,0,stats.kin,0,stats.spec);
-
+      console.log(key,stats.value)
     }
     for (let [key, combatSkills] of Object.entries(data.combatSkills)) {
       //
@@ -52,7 +52,7 @@ export class againstTdmActor extends Actor {
         combatSkills.stat = data.stats.bea.value;
       }
       combatSkills.value = calcTot(combatSkills.stat,combatSkills.rankBonus,combatSkills.voc,combatSkills.kin,combatSkills.spec,combatSkills.item);
-      
+      console.log(key,combatSkills.value)
     }
     for (let [key, armorSkills] of Object.entries(data.armorSkills)) {
       //
