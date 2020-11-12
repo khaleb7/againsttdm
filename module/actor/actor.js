@@ -33,8 +33,8 @@ export class againstTdmActor extends Actor {
     // Loop through stats and update derived values.
 
     for (let [key, stats] of Object.entries(data.stats)) {
-      stats.value = calcTot(stats.base,0,stats.kin,0,stats.spec);
-      console.log(key,stats.value)
+      stats.value = Number(stats.base) + Number(stats.kin) + Number(stats.spec);
+      console.log(key,stats.value, stats.base, stats.kin,stats.spec)
     }
     for (let [key, combatSkills] of Object.entries(data.combatSkills)) {
       //
