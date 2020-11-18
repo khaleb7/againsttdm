@@ -2,7 +2,7 @@
   "name": "againsttdm",
   "title": "Against the Dark Master",
   "description": "The Against the Dark Master system for FoundryVTT!",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "minimumCoreVersion": "0.5.5",
   "compatibleCoreVersion": "0.5.5",
   "templateVersion": 2,
@@ -24,6 +24,6 @@
   "secondaryTokenAttribute": "magicPoints",
   "url": "https://github.com/khaleb7/againsttdm",
   "manifest": "https://raw.githubusercontent.com/khaleb7/againsttdm/master/system.json",
-  "download": "https://github.com/khaleb7/againsttdm/archive/0_01prod.zip",
+  "download": "https://github.com/khaleb7/againsttdm/archive/0_02prod.zip",
   "license": "LICENSE.txt"
 }
