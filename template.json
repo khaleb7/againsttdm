@@ -37,13 +37,35 @@
       "templates": ["base"],
       "biography": "",
       "traits": "",
+      "narrative": {
+        "nature": {
+          "value": "",
+          "label": "Nature"
+        },
+        "motivation": {
+          "value": "",
+          "label": "Motivation"
+        },
+        "allegiance": {
+          "value": "",
+          "label": "Allegiance"
+        },
+        "heroicPath": {
+          "value": 0,
+          "label": "Heroic Path"
+        },
+        "drivePoints": {
+          "value": 0,
+          "label": "Drive Points"
+        }
+      },
+
       "kin": "",
       "level": "",
+      "xp": "",
       "culture": "",
       "vocation": "",
-      "motivation": "",
-      "nature": "",
-      "allegiance": "",
+
       "attributes": {
         "level": {
           "value": 1
