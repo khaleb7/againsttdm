@@ -40,6 +40,24 @@
                         <input type="text" name="data.defense.value" value="{{data.defense.value}}" data-dtype="Number"/>
                     </div>
                 </div>
+                <div class="resource flex-group-left">
+                    <label for="data.kin.value" class="attribute-label">Kin</label>
+                    <div class="resource-content flexrow flex-center flex-group-center">
+                        <input type="text" name="data.kin.value" value="{{data.kin.value}}" data-dtype="String"/>
+                    </div>
+                </div>
+                <div class="resource flex-group-left">
+                    <label for="data.vocation.value" class="attribute-label">Vocation</label>
+                    <div class="resource-content flexrow flex-center flex-group-center">
+                        <input type="text" name="data.vocation.value" value="{{data.vocation.value}}" data-dtype="String"/>
+                    </div>
+                </div>
+                <div class="resource flex-group-left">
+                    <label for="data.culture.value" class="attribute-label">Culture</label>
+                    <div class="resource-content flexrow flex-center flex-group-center">
+                        <input type="text" name="data.culture.value" value="{{data.culture.value}}" data-dtype="String"/>
+                    </div>
+                </div>
 
 
           </div>
@@ -111,7 +129,7 @@
             {{/each}}
               <br><label  class="attribute-label"> Combat </label>
               <div class="loreLegend flexrow flex-group-left">
-                  <label>  </label>
+                  <label> Skill </label>
                   <label> Stat </label>
                   <label> #Ranks </label>
                   <label> Bonus  </label>
@@ -119,11 +137,11 @@
                   <label> Kin </label>
                   <label> Spec </label>
                   <Label> Item </Label>
-                  <Label> TOT  </Label>
+                  <Label> RollMod  </Label>
               </div>
             {{#each data.combatSkills as |combatSkills key|}}
-            <div class="combatSkills flexrow flex-group-left">
-                <label for="data.combatSkills.{{key}}.value" class="attribute-label">{{combatSkills.label}}</label>
+            <div class="combatSkills flexrow flex-group-right">
+                <span class="ability-mod rollable" data-roll="d100 + {{combatSkills.value}} + {{combatSkills.modifier}}" data-label="{{combatSkills.label}} RollMod:{{combatSkills.modifier}}">{{combatSkills.label}}:{{combatSkills.value}}</span>
                 <input type="text" name="data.combatSkills.{{key}}.stat" value="{{combatSkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.combatSkills.{{key}}.rank" value="{{combatSkills.rank}}" data-dtype="Number"/>
                <input type="text" name="data.combatSkills.{{key}}.rankBonus" value="{{combatSkills.rankBonus}}" data-dtype="Number"/>
@@ -131,7 +149,7 @@
                 <input type="text" name="data.combatSkills.{{key}}.kin" value="{{combatSkills.kin}}" data-dtype="Number"/>
                 <input type="text" name="data.combatSkills.{{key}}.spec" value="{{combatSkills.spec}}" data-dtype="Number"/>
                <input type="text" name="data.combatSkills.{{key}}.item" value="{{combatSkills.item}}" data-dtype="Number"/>
-                <input type="text" name="data.combatSkills.{{key}}.value" value="{{combatSkills.value}}" data-dtype="Number"/>
+                <input type="text" name="data.combatSkills.{{key}}.modifier" value="{{combatSkills.modifier}}" data-dtype="Number"/>
             </div>
             {{/each}}
               <br><label  class="attribute-label"> Adventuring </label>
@@ -236,9 +254,8 @@
             </div>
             {{/each}}
         </div>
-    </div>
         {{!-- Owned Items Tab --}}
-    <div class="tab items" data-group="secondary" data-tab="items">
+          <div class="tab items" data-group="primary" data-tab="items">
             <ol class="items-list">
                 <li class="item flexrow item-header">
                   <div class="item-image"></div>
@@ -258,7 +275,7 @@
                 </li>
             {{/each}}
             </ol>
-        </div>
+          </div>
 
     </section>
 </form>
