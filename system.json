@@ -23,7 +23,7 @@
   "primaryTokenAttribute": "hitPoints",
   "secondaryTokenAttribute": "magicPoints",
   "url": "https://github.com/khaleb7/againsttdm",
-  "manifest": "https://github.com/khaleb7/againsttdm/main/system.json",
+  "manifest": "https://raw.githubusercontent.com/khaleb7/againsttdm/master/system.json",
   "download": "https://github.com/khaleb7/againsttdm/archive/0_01prod.zip",
   "license": "LICENSE.txt"
 }
