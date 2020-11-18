@@ -16,7 +16,7 @@ Hooks.once('init', async function() {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: actorData.data.stats.swi.value,
+    formula: "1d20",
     decimals: 0
   };
 
