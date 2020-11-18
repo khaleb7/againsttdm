@@ -1,13 +1,14 @@
 # againsttdm
 AgainstTheDarkMaster Foundry VTT
-This is quite literally 'boilerplate' at the moment.
 
-Most of the character data is complete, the extremely basic charactersheet is underway.
+What works now:
+- Most of the charactersheet can auto calc values aside from Saves and Rank bonus
+- Click on the skill/attribute and it should roll 1d100+ value. There is a RollMod field that you should adjust for plus/minus.
 
-The goals for version .01:
-- Data model for character
-- Data model for NPC
-- Macro for Die Roller
+What doesn't yet work:
 
-Not usable at the moment, but anyone who has some changes/additions (or knows HTML/CSS beyond what happened in 1998...) please 
-PR away!
+- No NPC sheet
+- Open ended rolls.
+
+
+
