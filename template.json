@@ -61,11 +61,10 @@
       },
 
       "kin": "",
-      "level": "",
-      "xp": "",
+      "level": 1,
+      "xp": 0,
       "culture": "",
       "vocation": "",
-
       "attributes": {
         "level": {
           "value": 1
@@ -75,6 +74,7 @@
         "toughness": {
           "value": 0,
           "lvl": 0,
+          "stat": 0,
           "kin": 0,
           "label": "Toughness(FOR)",
           "modifier": 0,
@@ -83,6 +83,7 @@
         "willpower": {
           "value": 0,
           "lvl": 0,
+          "stat": 0,
           "kin": 0,
           "label": "Willpower(WSD)",
           "modifier": 0,

@@ -30,6 +30,14 @@ export class againstTdmActor extends Actor {
       return Number(sBonus) + Number(rBonus) + Number(vBonus) + Number(kBonus) + Number(specBonus) + Number(iBonus);
 
     }
+    // Assign some specific values ot troublemaking stats... saves
+    data.saves.toughness.stat = data.stats.for.value;
+    data.saves.toughness.lvl = data.level.value;
+    data.saves.willpower.lvl = data.level.value;
+    data.saves.willpower.stat = data.stats.wsd.value;
+    data.saves.toughness.value = calcTot(data.saves.toughness.stat,data.saves.toughness,data.saves.toughness.kin,data.saves.toughness.spec);
+    data.saves.willpower.value = calcTot(data.saves.willpower.stat,data.saves.willpower,data.saves.willpower.kin,data.saves.willpower.spec);
+
     // Loop through stats and update derived values.
 
     for (let [key, stats] of Object.entries(data.stats)) {
