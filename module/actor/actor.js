@@ -31,12 +31,13 @@ export class againstTdmActor extends Actor {
 
     }
     // Assign some specific values ot troublemaking stats... saves
-    data.saves.toughness.stat = data.stats.for.value;
-    data.saves.toughness.lvl = data.level.value;
-    data.saves.willpower.lvl = data.level.value;
-    data.saves.willpower.stat = data.stats.wsd.value;
-    data.saves.toughness.value = calcTot(data.saves.toughness.stat,data.saves.toughness,data.saves.toughness.kin,data.saves.toughness.spec);
-    data.saves.willpower.value = calcTot(data.saves.willpower.stat,data.saves.willpower,data.saves.willpower.kin,data.saves.willpower.spec);
+    //data.saves.toughness.stat = data.stats.for.value;
+    //print(data.saves.toughness.stat);
+    //data.saves.toughness.lvl = data.level.value;
+    //data.saves.willpower.lvl = data.level.value;
+    //data.saves.willpower.stat = data.stats.wsd.value;
+    //data.saves.toughness.value = calcTot(data.saves.toughness.stat,data.saves.toughness,data.saves.toughness.kin,data.saves.toughness.spec);
+    //data.saves.willpower.value = calcTot(data.saves.willpower.stat,data.saves.willpower,data.saves.willpower.kin,data.saves.willpower.spec);
 
     // Loop through stats and update derived values.
 
@@ -44,8 +45,24 @@ export class againstTdmActor extends Actor {
       stats.value = Number(stats.base) + Number(stats.kin) + Number(stats.spec);
       console.log(key,stats.value, stats.base, stats.kin,stats.spec)
     }
-    for (let [key, combatSkills] of Object.entries(data.combatSkills)) {
+    for (let [key, saves] of Object.entries(data.saves)) {
       //
+      if(saves.pStat === 'data.stats.brn.value') {
+        saves.stat = data.stats.brn.value;
+      } else if (saves.pStat === 'data.stats.swi.value') {
+        saves.stat = data.stats.swi.value;
+      } else if (saves.pStat === 'data.stats.for.value') {
+        saves.stat = data.stats.for.value;
+      }else if (saves.pStat === 'data.stats.wit.value') {
+        saves.stat = data.stats.wit.value;
+      }else if (saves.pStat === 'data.stats.wsd.value') {
+        saves.stat = data.stats.wsd.value;
+      }else {
+        saves.stat = data.stats.bea.value;
+      }
+      saves.value = calcTot(saves.stat,saves.lvl,saves.voc,saves.kin,saves.spec,saves.item);
+      console.log(key,saves.value)
+
       if(combatSkills.pStat === 'data.stats.brn.value') {
         combatSkills.stat = data.stats.brn.value;
       } else if (combatSkills.pStat === 'data.stats.swi.value') {
