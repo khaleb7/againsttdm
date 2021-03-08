@@ -158,7 +158,7 @@
             <Label> RollMod  </Label>
         </div>
         {{#each data.saves as |saves key|}}
-        <div class="saves flexrow flex-group-left">
+        <div class="saves flexrow flex-group-right">
             <span class="ability-mod rollable" data-roll="d100x>95 + {{saves.value}} + {{saves.modifier}}" data-label="{{saves.label}} RollMod:{{saves.modifier}}">{{saves.label}}:{{saves.value}}</span>
             <input type="text" name="data.saves.{{key}}.stat" value="{{saves.stat}}" data-dtype="Number"/>
             <input type="text" name="data.saves.{{key}}.lvl" value="{{saves.lvl}}" data-dtype="Number"/>
@@ -182,7 +182,7 @@
                   <Label> RollMod  </Label>
               </div>
             {{#each data.armorSkills as |armorSkills key|}}
-            <div class="armorSkills flexrow flex-group-left">
+            <div class="armorSkills flexrow flex-group-right">
                 <span class="ability-mod rollable" data-roll="d100x>95 + {{armorSkills.value}} + {{armorSkills.modifier}}" data-label="{{armorSkills.label}} RollMod:{{armorSkills.modifier}}">{{armorSkills.label}}:{{armorSkills.value}}</span>
                 <input type="text" name="data.armorSkills.{{key}}.stat" value="{{armorSkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.armorSkills.{{key}}.rank" value="{{armorSkills.rank}}" data-dtype="Number"/>
@@ -308,7 +308,7 @@
                 <Label> RollMod  </Label>
             </div>
             {{#each data.bodySkills as |bodySkills key|}}
-            <div class="loreSkills flexrow grid-9col">
+            <div class="loreSkills flexrow flex-group-right">
                 <span class="ability-mod rollable" data-roll="d100x>95 + {{bodySkills.value}} + {{bodySkills.modifier}}" data-label="{{bodySkills.label}} RollMod:{{bodySkills.modifier}}">{{bodySkills.label}}:{{bodySkills.value}}</span>
                 <input type="text" name="data.bodySkills.{{key}}.stat" value="{{bodySkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.bodySkills.{{key}}.rank" value="{{bodySkills.rank}}" data-dtype="Number"/>
