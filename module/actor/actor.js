@@ -60,7 +60,7 @@ export class againstTdmActor extends Actor {
       } else {
         saves.stat = data.stats.bea.value;
       }
-      saves.value = calcTot(saves.stat, saves.lvl, saves.voc, saves.kin, saves.spec, saves.item);
+      saves.value = calcTot(saves.stat, saves.lvl, saves.kin, saves.spec);
       console.log(key, saves.value)
     }
     for (let [key, combatSkills] of Object.entries(data.combatSkills)) {
