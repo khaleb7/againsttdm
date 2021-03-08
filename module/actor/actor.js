@@ -47,21 +47,24 @@ export class againstTdmActor extends Actor {
     }
     for (let [key, saves] of Object.entries(data.saves)) {
       //
-      if(saves.pStat === 'data.stats.brn.value') {
+      if (saves.pStat === 'data.stats.brn.value') {
         saves.stat = data.stats.brn.value;
       } else if (saves.pStat === 'data.stats.swi.value') {
         saves.stat = data.stats.swi.value;
       } else if (saves.pStat === 'data.stats.for.value') {
         saves.stat = data.stats.for.value;
-      }else if (saves.pStat === 'data.stats.wit.value') {
+      } else if (saves.pStat === 'data.stats.wit.value') {
         saves.stat = data.stats.wit.value;
-      }else if (saves.pStat === 'data.stats.wsd.value') {
+      } else if (saves.pStat === 'data.stats.wsd.value') {
         saves.stat = data.stats.wsd.value;
-      }else {
+      } else {
         saves.stat = data.stats.bea.value;
       }
-      saves.value = calcTot(saves.stat,saves.lvl,saves.voc,saves.kin,saves.spec,saves.item);
-      console.log(key,saves.value)
+      saves.value = calcTot(saves.stat, saves.lvl, saves.voc, saves.kin, saves.spec, saves.item);
+      console.log(key, saves.value)
+    }
+    for (let [key, combatSkills] of Object.entries(data.combatSkills)) {
+
 
       if(combatSkills.pStat === 'data.stats.brn.value') {
         combatSkills.stat = data.stats.brn.value;
