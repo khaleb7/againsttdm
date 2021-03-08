@@ -13,25 +13,25 @@
               and it will add a small amount of padding, a border, and will
               center all of its child elements content and text. --}}
 
-                <div class="resource flex-group-left">
+                <div class="resources flex-group-left">
                     <label for="data.kin.value" class="attribute-label">Kin</label>
                     <div class="resource-content flexrow flex-center flex-group-center">
                         <input type="text" name="data.kin.value" value="{{data.kin.value}}" data-dtype="String"/>
                     </div>
                 </div>
-                <div class="resource flex-group-left">
+                <div class="resources sflex-group-left">
                     <label for="data.vocation.value" class="attribute-label">Vocation</label>
                     <div class="resource-content flexrow flex-center flex-group-center">
                         <input type="text" name="data.vocation.value" value="{{data.vocation.value}}" data-dtype="String"/>
                     </div>
                 </div>
-                <div class="resource flex-group-left">
+                <div class="resources flex-group-left">
                     <label for="data.culture.value" class="attribute-label">Culture</label>
                     <div class="resource-content flexrow flex-center flex-group-center">
                         <input type="text" name="data.culture.value" value="{{data.culture.value}}" data-dtype="String"/>
                     </div>
                 </div>
-                <div class="resource flex-group-center">
+                <div class="resources flex-group-center">
                     <label for="data.xp.value" class="attribute-label">XP : Level</label>
                     <div class="resource-content flexrow flex-center flex-between">
                         <input type="text" name="data.xp.value" value="{{data.xp.value}}" data-dtype="Number"/>
@@ -43,7 +43,7 @@
           </div>
             <div class="resources grid grid-5col">
 
-                <div class="resource flex-group-center">
+                <div class="resources flex-group-center">
                     <label for="data.hitPoints.value" class="attribute-label">HP</label>
                     <div class="resource-content flexrow flex-center flex-between">
                         <input type="text" name="data.hitPoints.value" value="{{data.hitPoints.value}}" data-dtype="Number"/>
@@ -51,7 +51,7 @@
                         <input type="text" name="data.hitPoints.max" value="{{data.hitPoints.max}}" data-dtype="Number"/>
                     </div>
                 </div>
-                <div class="resource flex-group-center">
+                <div class="resources flex-group-center">
                     <label for="data.magicPoints.value" class="attribute-label">Magic</label>
                     <div class="resource-content flexrow flex-center flex-between">
                         <input type="text" name="data.magicPoints.value" value="{{data.magicPoints.value}}" data-dtype="Number"/>
@@ -59,13 +59,13 @@
                         <input type="text" name="data.magicPoints.max" value="{{data.magicPoints.max}}" data-dtype="Number"/>
                     </div>
                 </div>
-                <div class="resource flex-group-left">
+                <div class="resources flex-group-left">
                     <label for="data.moveRate.value" class="attribute-label">Move</label>
                     <div class="resource-content flexrow flex-center flex-group-center">
                         <input type="text" name="data.moveRate.value" value="{{data.moveRate.value}}" data-dtype="Number"/>
                     </div>
                 </div>
-                <div class="resource flex-group-left">
+                <div class="resources flex-group-left">
                     <label for="data.defense.value" class="attribute-label">Defense</label>
                     <div class="resource-content flexrow flex-center flex-group-center">
                         <input type="text" name="data.defense.value" value="{{data.defense.value}}" data-dtype="Number"/>
@@ -103,32 +103,32 @@
                           <input type="text" name="data.narrative.nature.value" value="{{data.narrative.nature.value}}" data-dtype="String"/>
                       </div>
                   </div>
-                  <div class="resource flex-group-left">
+                  <div class="resources flex-group-left">
                       <label for="data.narrative.motivation.value" class="attribute-label">Motivation</label>
                       <div class="resource-content flexrow flex-center flex-group-center">
                           <input type="text" name="data.narrative.motivation.value" value="{{data.narrative.motivation.value}}" data-dtype="String"/>
                       </div>
                   </div>
-                  <div class="resource flex-group-left">
+                  <div class="resources flex-group-left">
                       <label for="data.narrative.allegiance.value" class="attribute-label">Allegiance</label>
                       <div class="resource-content flexrow flex-center flex-group-center">
                           <input type="text" name="data.narrative.allegiance.value" value="{{data.narrative.allegiance.value}}" data-dtype="String"/>
                       </div>
                   </div>
-                  <div class="resource flex-group-left">
+                  <div class="resources flex-group-left">
                       <label for="data.narrative.heroicPath.value" class="attribute-label">Heroic Path</label>
                       <div class="resource-content flexrow flex-center flex-group-center">
                           <input type="text" name="data.narrative.heroicPath.value" value="{{data.narrative.heroicPath.value}}" data-dtype="Number"/>
                       </div>
                   </div>
-                  <div class="resource flex-group-left">
+                  <div class="flex-group-left">
                       <label for="data.narrative.drivePoints.value" class="attribute-label">Drive Points</label>
                       <div class="resource-content flexrow flex-center flex-group-center">
                           <input type="text" name="data.narrative.drivePoints.value" value="{{data.narrative.drivePoints.value}}" data-dtype="Number"/>
                       </div>
                   </div>
               </div>
-              <div class="loreLegend flexrow flex-group-left">
+              <div class="flex-group-right">
                   <label> STATS  </label>
                   <label> Base </label>
                   <label> Kin </label>
@@ -136,7 +136,7 @@
                   <Label> TOT  </Label>
               </div>
                   {{#each data.stats as |stats key|}}
-                  <div class="stats flexrow flex-group-left">
+                  <div class="flex-group-right">
                       <label for="data.stats.{{key}}.value" class="attribute-label">{{stats.label}}</label>
                       <input type="text" name="data.stats.{{key}}.base" value="{{stats.base}}" data-dtype="Number"/>
                       <input type="text" name="data.stats.{{key}}.kin" value="{{stats.kin}}" data-dtype="Number"/>
@@ -147,7 +147,7 @@
               </div>
 
 
-        <div class="loreLegend flexrow flex-group-right">
+        <div class="flex-group-right">
             <label> SAVES </label>
             <label> Stat </label>
             <label> Level </label>
@@ -156,8 +156,8 @@
             <Label> RollMod  </Label>
         </div>
         {{#each data.saves as |saves key|}}
-        <div class="saves flexrow flex-group-right">
-            <span class="ability-mod rollable" data-roll="d100x>95 + {{saves.value}} + {{saves.modifier}}" data-label="{{saves.label}} RollMod:{{saves.modifier}}">{{saves.label}}:{{saves.value}} style="color:blue"</span>
+        <div class="flex-group-right">
+            <span class="ability-mod rollable" data-roll="d100x>95 + {{saves.value}} + {{saves.modifier}}" data-label="{{saves.label}} RollMod:{{saves.modifier}}">{{saves.label}}:{{saves.value}} </span>
             <input type="text" name="data.saves.{{key}}.stat" value="{{saves.stat}}" data-dtype="Number"/>
             <input type="text" name="data.saves.{{key}}.lvl" value="{{saves.lvl}}" data-dtype="Number"/>
             <input type="text" name="data.saves.{{key}}.kin" value="{{saves.kin}}" data-dtype="Number"/>
@@ -167,7 +167,7 @@
         {{/each}}
 
 
-              <div class="loreLegend flexrow flex-group-right">
+              <div class="flex-group-right">
                   <label> ARMOR  </label>
                   <label> Stat </label>
                   <label> #Ranks </label>
@@ -179,7 +179,7 @@
                   <Label> RollMod  </Label>
               </div>
             {{#each data.armorSkills as |armorSkills key|}}
-            <div class="armorSkills flexrow flex-group-right">
+            <div class="flex-group-right">
                 <span class="ability-mod rollable" data-roll="d100x>95 + {{armorSkills.value}} + {{armorSkills.modifier}}" data-label="{{armorSkills.label}} RollMod:{{armorSkills.modifier}}">{{armorSkills.label}}:{{armorSkills.value}}</span>
                 <input type="text" name="data.armorSkills.{{key}}.stat" value="{{armorSkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.armorSkills.{{key}}.rank" value="{{armorSkills.rank}}" data-dtype="Number"/>
@@ -191,7 +191,7 @@
                 <input type="text" name="data.armorSkills.{{key}}.value" value="{{armorSkills.value}}" data-dtype="Number"/>
             </div>
             {{/each}}
-              <div class="loreLegend flexrow flex-group-right">
+              <div class="flex-group-right">
                   <label> COMBAT </label>
                   <label> Stat </label>
                   <label> #Ranks </label>
@@ -203,7 +203,7 @@
                   <Label> RollMod  </Label>
               </div>
             {{#each data.combatSkills as |combatSkills key|}}
-            <div class="combatSkills flexrow flex-group-right">
+            <div class="flex-group-right">
                 <span class="ability-mod rollable" data-roll="d100x>95 + {{combatSkills.value}} + {{combatSkills.modifier}}" data-label="{{combatSkills.label}} RollMod:{{combatSkills.modifier}}">{{combatSkills.label}}:{{combatSkills.value}}</span>
                 <input type="text" name="data.combatSkills.{{key}}.stat" value="{{combatSkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.combatSkills.{{key}}.rank" value="{{combatSkills.rank}}" data-dtype="Number"/>
@@ -215,7 +215,7 @@
                 <input type="text" name="data.combatSkills.{{key}}.modifier" value="{{combatSkills.modifier}}" data-dtype="Number"/>
             </div>
             {{/each}}
-              <div class="loreLegend flexrow flex-group-right">
+              <div class="flex-group-right">
                   <label> ADVENTURING </label>
                   <label> Stat </label>
                   <label> #Ranks </label>
@@ -227,7 +227,7 @@
                   <Label> RollMod  </Label>
               </div>
             {{#each data.adventuringSkills as |adventuringSkills key|}}
-            <div class="adventuringSkills flexrow flex-group-right">
+            <div class="flex-group-right">
                 <span class="ability-mod rollable" data-roll="d100x>95 + {{adventuringSkills.value}} + {{adventuringSkills.modifier}}" data-label="{{adventuringSkills.label}} RollMod:{{adventuringSkills.modifier}}">{{adventuringSkills.label}}:{{adventuringSkills.value}}</span>
                 <input type="text" name="data.adventuringSkills.{{key}}.stat" value="{{adventuringSkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.adventuringSkills.{{key}}.rank" value="{{adventuringSkills.rank}}" data-dtype="Number"/>
@@ -239,7 +239,7 @@
                 <input type="text" name="data.adventuringSkills.{{key}}.modifier" value="{{adventuringSkills.modifier}}" data-dtype="Number"/>
             </div>
             {{/each}}
-              <div class="loreLegend flexrow flex-group-right">
+              <div class="flex-group-right">
                   <label> ROGUERY </label>
                   <label> Stat </label>
                   <label> #Ranks </label>
@@ -251,7 +251,7 @@
                   <Label> RollMod  </Label>
               </div>
             {{#each data.roguerySkills as |roguerySkills key|}}
-            <div class="roguerySkills flexrow flex-group-right">
+            <div class="flex-group-right">
                 <span class="ability-mod rollable" data-roll="d100x>95 + {{roguerySkills.value}} + {{roguerySkills.modifier}}" data-label="{{roguerySkills.label}} RollMod:{{roguerySkills.modifier}}">{{roguerySkills.label}}:{{roguerySkills.value}}</span>
                 <input type="text" name="data.roguerySkills.{{key}}.stat" value="{{roguerySkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.roguerySkills.{{key}}.rank" value="{{roguerySkills.rank}}" data-dtype="Number"/>
@@ -263,7 +263,7 @@
                 <input type="text" name="data.roguerySkills.{{key}}.modifier" value="{{roguerySkills.modifier}}" data-dtype="Number"/>
             </div>
             {{/each}}
-              <div class="loreLegend flexrow flex-group-right">
+              <div class="flex-group-right">
                   <label> LORE </label>
                   <label> Stat </label>
                   <label> #Ranks </label>
@@ -275,7 +275,7 @@
                   <Label> RollMod  </Label>
               </div>
             {{#each data.loreSkills as |loreSkills key|}}
-            <div class="loreSkills flexrow flex-group-right">
+            <div class="flex-group-right">
                 <span class="ability-mod rollable" data-roll="d100x>95 + {{loreSkills.value}} + {{loreSkills.modifier}}" data-label="{{loreSkills.label}} RollMod:{{loreSkills.modifier}}">{{loreSkills.label}}:{{loreSkills.value}}</span>
                 <input type="text" name="data.loreSkills.{{key}}.stat" value="{{loreSkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.loreSkills.{{key}}.rank" value="{{loreSkills.rank}}" data-dtype="Number"/>
@@ -288,7 +288,7 @@
             </div>
             {{/each}}
 
-            <div class="loreLegend flexrow flex-group-right">
+            <div class="flex-group-right">
                 <label> BODY </label>
                 <label> Stat </label>
                 <label> #Ranks </label>
@@ -300,7 +300,7 @@
                 <Label> RollMod  </Label>
             </div>
             {{#each data.bodySkills as |bodySkills key|}}
-            <div class="loreSkills flexrow flex-group-right">
+            <div class="flex-group-right">
                 <span class="ability-mod rollable" data-roll="d100x>95 + {{bodySkills.value}} + {{bodySkills.modifier}}" data-label="{{bodySkills.label}} RollMod:{{bodySkills.modifier}}">{{bodySkills.label}}:{{bodySkills.value}}</span>
                 <input type="text" name="data.bodySkills.{{key}}.stat" value="{{bodySkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.bodySkills.{{key}}.rank" value="{{bodySkills.rank}}" data-dtype="Number"/>
