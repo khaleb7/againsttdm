@@ -41,7 +41,38 @@
                 </div>
 
           </div>
+            <div class="resources grid grid-5col">
 
+                <div class="resource flex-group-center">
+                    <label for="data.hitPoints.value" class="attribute-label">HP</label>
+                    <div class="resource-content flexrow flex-center flex-between">
+                        <input type="text" name="data.hitPoints.value" value="{{data.hitPoints.value}}" data-dtype="Number"/>
+                        <span> / </span>
+                        <input type="text" name="data.hitPoints.max" value="{{data.hitPoints.max}}" data-dtype="Number"/>
+                    </div>
+                </div>
+                <div class="resource flex-group-center">
+                    <label for="data.magicPoints.value" class="attribute-label">Magic</label>
+                    <div class="resource-content flexrow flex-center flex-between">
+                        <input type="text" name="data.magicPoints.value" value="{{data.magicPoints.value}}" data-dtype="Number"/>
+                        <span> / </span>
+                        <input type="text" name="data.magicPoints.max" value="{{data.magicPoints.max}}" data-dtype="Number"/>
+                    </div>
+                </div>
+                <div class="resource flex-group-left">
+                    <label for="data.moveRate.value" class="attribute-label">Move</label>
+                    <div class="resource-content flexrow flex-center flex-group-center">
+                        <input type="text" name="data.moveRate.value" value="{{data.moveRate.value}}" data-dtype="Number"/>
+                    </div>
+                </div>
+                <div class="resource flex-group-left">
+                    <label for="data.defense.value" class="attribute-label">Defense</label>
+                    <div class="resource-content flexrow flex-center flex-group-center">
+                        <input type="text" name="data.defense.value" value="{{data.defense.value}}" data-dtype="Number"/>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
     </header>
@@ -97,9 +128,8 @@
                       </div>
                   </div>
               </div>
-              <br><label  class="attribute-label"> Stats </label>
               <div class="loreLegend flexrow flex-group-left">
-                  <label>  </label>
+                  <label> STATS  </label>
                   <label> Base </label>
                   <label> Kin </label>
                   <label> Spec  </label>
@@ -115,42 +145,10 @@
                   </div>
                   {{/each}}
               </div>
-        <div class="resources grid grid-5col">
 
-        <div class="resource flex-group-center">
-            <label for="data.hitPoints.value" class="attribute-label">HP</label>
-            <div class="resource-content flexrow flex-center flex-between">
-                <input type="text" name="data.hitPoints.value" value="{{data.hitPoints.value}}" data-dtype="Number"/>
-                <span> / </span>
-                <input type="text" name="data.hitPoints.max" value="{{data.hitPoints.max}}" data-dtype="Number"/>
-            </div>
-        </div>
-        <div class="resource flex-group-center">
-            <label for="data.magicPoints.value" class="attribute-label">Magic</label>
-            <div class="resource-content flexrow flex-center flex-between">
-                <input type="text" name="data.magicPoints.value" value="{{data.magicPoints.value}}" data-dtype="Number"/>
-                <span> / </span>
-                <input type="text" name="data.magicPoints.max" value="{{data.magicPoints.max}}" data-dtype="Number"/>
-            </div>
-        </div>
-        <div class="resource flex-group-left">
-            <label for="data.moveRate.value" class="attribute-label">Move</label>
-            <div class="resource-content flexrow flex-center flex-group-center">
-                <input type="text" name="data.moveRate.value" value="{{data.moveRate.value}}" data-dtype="Number"/>
-            </div>
-        </div>
-        <div class="resource flex-group-left">
-            <label for="data.defense.value" class="attribute-label">Defense</label>
-            <div class="resource-content flexrow flex-center flex-group-center">
-                <input type="text" name="data.defense.value" value="{{data.defense.value}}" data-dtype="Number"/>
-            </div>
-        </div>
 
-        </div>
-
-        <br><label  class="attribute-label"> Saves </label>
         <div class="loreLegend flexrow flex-group-right">
-            <label>  </label>
+            <label> SAVES </label>
             <label> Stat </label>
             <label> Level </label>
             <label> Kin </label>
@@ -169,9 +167,8 @@
         {{/each}}
 
 
-              <br><label  class="attribute-label"> Armor </label>
               <div class="loreLegend flexrow flex-group-right">
-                  <label>  </label>
+                  <label> ARMOR  </label>
                   <label> Stat </label>
                   <label> #Ranks </label>
                   <label> Bonus  </label>
@@ -194,9 +191,8 @@
                 <input type="text" name="data.armorSkills.{{key}}.value" value="{{armorSkills.value}}" data-dtype="Number"/>
             </div>
             {{/each}}
-              <br><label  class="attribute-label"> Combat </label>
               <div class="loreLegend flexrow flex-group-right">
-                  <label> Skill </label>
+                  <label> COMBAT </label>
                   <label> Stat </label>
                   <label> #Ranks </label>
                   <label> Bonus  </label>
@@ -219,9 +215,8 @@
                 <input type="text" name="data.combatSkills.{{key}}.modifier" value="{{combatSkills.modifier}}" data-dtype="Number"/>
             </div>
             {{/each}}
-              <br><label  class="attribute-label"> Adventuring </label>
               <div class="loreLegend flexrow flex-group-right">
-                  <label>  </label>
+                  <label> ADVENTURING </label>
                   <label> Stat </label>
                   <label> #Ranks </label>
                   <label> Bonus  </label>
@@ -244,9 +239,8 @@
                 <input type="text" name="data.adventuringSkills.{{key}}.modifier" value="{{adventuringSkills.modifier}}" data-dtype="Number"/>
             </div>
             {{/each}}
-              <br><label  class="attribute-label"> Roguery </label>
               <div class="loreLegend flexrow flex-group-right">
-                  <label>  </label>
+                  <label> ROGUERY </label>
                   <label> Stat </label>
                   <label> #Ranks </label>
                   <label> Bonus  </label>
@@ -269,9 +263,8 @@
                 <input type="text" name="data.roguerySkills.{{key}}.modifier" value="{{roguerySkills.modifier}}" data-dtype="Number"/>
             </div>
             {{/each}}
-              <br><label  class="attribute-label"> Lore </label>
               <div class="loreLegend flexrow flex-group-right">
-                  <label>  </label>
+                  <label> LORE </label>
                   <label> Stat </label>
                   <label> #Ranks </label>
                   <label> Bonus  </label>
@@ -295,9 +288,8 @@
             </div>
             {{/each}}
 
-            <br><label  class="attribute-label"> Body </label>
             <div class="loreLegend flexrow flex-group-right">
-                <label>  </label>
+                <label> BODY </label>
                 <label> Stat </label>
                 <label> #Ranks </label>
                 <label> Bonus  </label>
