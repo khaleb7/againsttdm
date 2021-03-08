@@ -308,7 +308,7 @@
                 <Label> RollMod  </Label>
             </div>
             {{#each data.bodySkills as |bodySkills key|}}
-            <div class="loreSkills flexrow flex-group-right">
+            <div class="loreSkills flexrow grid-9col">
                 <span class="ability-mod rollable" data-roll="d100x>95 + {{bodySkills.value}} + {{bodySkills.modifier}}" data-label="{{bodySkills.label}} RollMod:{{bodySkills.modifier}}">{{bodySkills.label}}:{{bodySkills.value}}</span>
                 <input type="text" name="data.bodySkills.{{key}}.stat" value="{{bodySkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.bodySkills.{{key}}.rank" value="{{bodySkills.rank}}" data-dtype="Number"/>
