@@ -157,7 +157,7 @@
         </div>
         {{#each data.saves as |saves key|}}
         <div class="saves flexrow flex-group-right">
-            <span class="ability-mod rollable" data-roll="d100x>95 + {{saves.value}} + {{saves.modifier}}" data-label="{{saves.label}} RollMod:{{saves.modifier}}">{{saves.label}}:{{saves.value}}</span>
+            <span class="ability-mod rollable" data-roll="d100x>95 + {{saves.value}} + {{saves.modifier}}" data-label="{{saves.label}} RollMod:{{saves.modifier}}">{{saves.label}}:{{saves.value}} style="color:blue"</span>
             <input type="text" name="data.saves.{{key}}.stat" value="{{saves.stat}}" data-dtype="Number"/>
             <input type="text" name="data.saves.{{key}}.lvl" value="{{saves.lvl}}" data-dtype="Number"/>
             <input type="text" name="data.saves.{{key}}.kin" value="{{saves.kin}}" data-dtype="Number"/>
