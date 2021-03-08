@@ -159,7 +159,7 @@
         </div>
         {{#each data.saves as |saves key|}}
         <div class="saves flexrow flex-group-left">
-            <span class="ability-mod rollable" data-roll="d100 + {{saves.value}} + {{saves.modifier}}" data-label="{{saves.label}} RollMod:{{saves.modifier}}">{{saves.label}}:{{saves.value}}</span>
+            <span class="ability-mod rollable" data-roll="d100x>95 + {{saves.value}} + {{saves.modifier}}" data-label="{{saves.label}} RollMod:{{saves.modifier}}">{{saves.label}}:{{saves.value}}</span>
             <input type="text" name="data.saves.{{key}}.stat" value="{{saves.stat}}" data-dtype="Number"/>
             <input type="text" name="data.saves.{{key}}.lvl" value="{{saves.lvl}}" data-dtype="Number"/>
             <input type="text" name="data.saves.{{key}}.kin" value="{{saves.kin}}" data-dtype="Number"/>
@@ -183,7 +183,7 @@
               </div>
             {{#each data.armorSkills as |armorSkills key|}}
             <div class="armorSkills flexrow flex-group-left">
-                <span class="ability-mod rollable" data-roll="d100 + {{armorSkills.value}} + {{armorSkills.modifier}}" data-label="{{armorSkills.label}} RollMod:{{armorSkills.modifier}}">{{armorSkills.label}}:{{armorSkills.value}}</span>
+                <span class="ability-mod rollable" data-roll="d100x>95 + {{armorSkills.value}} + {{armorSkills.modifier}}" data-label="{{armorSkills.label}} RollMod:{{armorSkills.modifier}}">{{armorSkills.label}}:{{armorSkills.value}}</span>
                 <input type="text" name="data.armorSkills.{{key}}.stat" value="{{armorSkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.armorSkills.{{key}}.rank" value="{{armorSkills.rank}}" data-dtype="Number"/>
                 <input type="text" name="data.armorSkills.{{key}}.rankBonus" value="{{armorSkills.rankBonus}}" data-dtype="Number"/>
@@ -208,7 +208,7 @@
               </div>
             {{#each data.combatSkills as |combatSkills key|}}
             <div class="combatSkills flexrow flex-group-right">
-                <span class="ability-mod rollable" data-roll="d100 + {{combatSkills.value}} + {{combatSkills.modifier}}" data-label="{{combatSkills.label}} RollMod:{{combatSkills.modifier}}">{{combatSkills.label}}:{{combatSkills.value}}</span>
+                <span class="ability-mod rollable" data-roll="d100x>95 + {{combatSkills.value}} + {{combatSkills.modifier}}" data-label="{{combatSkills.label}} RollMod:{{combatSkills.modifier}}">{{combatSkills.label}}:{{combatSkills.value}}</span>
                 <input type="text" name="data.combatSkills.{{key}}.stat" value="{{combatSkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.combatSkills.{{key}}.rank" value="{{combatSkills.rank}}" data-dtype="Number"/>
                <input type="text" name="data.combatSkills.{{key}}.rankBonus" value="{{combatSkills.rankBonus}}" data-dtype="Number"/>
@@ -233,7 +233,7 @@
               </div>
             {{#each data.adventuringSkills as |adventuringSkills key|}}
             <div class="adventuringSkills flexrow flex-group-right">
-                <span class="ability-mod rollable" data-roll="d100 + {{adventuringSkills.value}} + {{adventuringSkills.modifier}}" data-label="{{adventuringSkills.label}} RollMod:{{adventuringSkills.modifier}}">{{adventuringSkills.label}}:{{adventuringSkills.value}}</span>
+                <span class="ability-mod rollable" data-roll="d100x>95 + {{adventuringSkills.value}} + {{adventuringSkills.modifier}}" data-label="{{adventuringSkills.label}} RollMod:{{adventuringSkills.modifier}}">{{adventuringSkills.label}}:{{adventuringSkills.value}}</span>
                 <input type="text" name="data.adventuringSkills.{{key}}.stat" value="{{adventuringSkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.adventuringSkills.{{key}}.rank" value="{{adventuringSkills.rank}}" data-dtype="Number"/>
                 <input type="text" name="data.adventuringSkills.{{key}}.rankBonus" value="{{adventuringSkills.rankBonus}}" data-dtype="Number"/>
@@ -258,7 +258,7 @@
               </div>
             {{#each data.roguerySkills as |roguerySkills key|}}
             <div class="roguerySkills flexrow flex-group-right">
-                <span class="ability-mod rollable" data-roll="d100 + {{roguerySkills.value}} + {{roguerySkills.modifier}}" data-label="{{roguerySkills.label}} RollMod:{{roguerySkills.modifier}}">{{roguerySkills.label}}:{{roguerySkills.value}}</span>
+                <span class="ability-mod rollable" data-roll="d100x>95 + {{roguerySkills.value}} + {{roguerySkills.modifier}}" data-label="{{roguerySkills.label}} RollMod:{{roguerySkills.modifier}}">{{roguerySkills.label}}:{{roguerySkills.value}}</span>
                 <input type="text" name="data.roguerySkills.{{key}}.stat" value="{{roguerySkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.roguerySkills.{{key}}.rank" value="{{roguerySkills.rank}}" data-dtype="Number"/>
                 <input type="text" name="data.roguerySkills.{{key}}.rankBonus" value="{{roguerySkills.rankBonus}}" data-dtype="Number"/>
@@ -283,7 +283,7 @@
               </div>
             {{#each data.loreSkills as |loreSkills key|}}
             <div class="loreSkills flexrow flex-group-right">
-                <span class="ability-mod rollable" data-roll="d100 + {{loreSkills.value}} + {{loreSkills.modifier}}" data-label="{{loreSkills.label}} RollMod:{{loreSkills.modifier}}">{{loreSkills.label}}:{{loreSkills.value}}</span>
+                <span class="ability-mod rollable" data-roll="d100x>95 + {{loreSkills.value}} + {{loreSkills.modifier}}" data-label="{{loreSkills.label}} RollMod:{{loreSkills.modifier}}">{{loreSkills.label}}:{{loreSkills.value}}</span>
                 <input type="text" name="data.loreSkills.{{key}}.stat" value="{{loreSkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.loreSkills.{{key}}.rank" value="{{loreSkills.rank}}" data-dtype="Number"/>
                 <input type="text" name="data.loreSkills.{{key}}.rankBonus" value="{{loreSkills.rankBonus}}" data-dtype="Number"/>
@@ -309,7 +309,7 @@
             </div>
             {{#each data.bodySkills as |bodySkills key|}}
             <div class="loreSkills flexrow flex-group-right">
-                <span class="ability-mod rollable" data-roll="d100 + {{bodySkills.value}} + {{bodySkills.modifier}}" data-label="{{bodySkills.label}} RollMod:{{bodySkills.modifier}}">{{bodySkills.label}}:{{bodySkills.value}}</span>
+                <span class="ability-mod rollable" data-roll="d100x>95 + {{bodySkills.value}} + {{bodySkills.modifier}}" data-label="{{bodySkills.label}} RollMod:{{bodySkills.modifier}}">{{bodySkills.label}}:{{bodySkills.value}}</span>
                 <input type="text" name="data.bodySkills.{{key}}.stat" value="{{bodySkills.stat}}" data-dtype="Number"/>
                 <input type="text" name="data.bodySkills.{{key}}.rank" value="{{bodySkills.rank}}" data-dtype="Number"/>
                 <input type="text" name="data.bodySkills.{{key}}.rankBonus" value="{{bodySkills.rankBonus}}" data-dtype="Number"/>
