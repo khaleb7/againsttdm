@@ -77,6 +77,7 @@
           "stat": 0,
           "kin": 0,
           "label": "Toughness(FOR)",
+          "pStat": "data.stats.for.value",
           "modifier": 0,
           "spec": 0
         },
@@ -86,6 +87,7 @@
           "stat": 0,
           "kin": 0,
           "label": "Willpower(WSD)",
+          "pStat": "data.stats.wsd.value",
           "modifier": 0,
           "spec": 0
                }
