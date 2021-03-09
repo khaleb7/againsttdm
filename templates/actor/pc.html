@@ -156,7 +156,7 @@
 
             <table id="againsttdm">
                 <tr>
-                    <th>STATS</th>
+                    <th>STAT</th>
                     <th>Base</th>
                     <th>Kin</th>
                     <th>Spec</th>
@@ -205,29 +205,36 @@
                     <td><input type="text" name="data.stats.bea.value" value="{{data.stats.bea.value}}" data-dtype="Number" placeholder="0"/></td>
                 </tr>
             </table>
+            <table id="againsttdm">
+                <tr>
+                    <th>SAVES</th>
+                    <th>Stat</th>
+                    <th>Level</th>
+                    <th>Kin</th>
+                    <th>Spec</th>
+                    <th>RollMod</th>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.saves.toughness.value}} + {{data.saves.toughness.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.saves.toughness.label}}:{{data.saves.toughness.value}} </span></td>
+                    <td> <input type="text" name="data.saves.toughness.stat" value="{{data.saves.toughness.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.saves.toughness.lvl" value="{{data.saves.toughness.lvl}}" data-dtype="Number" placeholder="{{data.attributes.level.value}}"/></td>
+                    <td><input type="text" name="data.saves.toughness.kin" value="{{data.saves.toughness.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.saves.toughness.spec" value="{{data.saves.toughness.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.saves.toughness.modifier" value="{{data.saves.toughness.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.saves.willpower.value}} + {{data.saves.willpower.modifier}}" data-label="{{data.saves.willpower.label}} RollMod:{{data.saves.willpower.modifier}}">{{data.saves.willpower.label}}:{{data.saves.willpower.value}} </span></td>
+                    <td> <input type="text" name="data.saves.willpower.stat" value="{{data.saves.willpower.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.saves.willpower.lvl" value="{{data.saves.willpower.lvl}}" data-dtype="Number" placeholder="{{data.attributes.level.value}}"/></td>
+                    <td><input type="text" name="data.saves.willpower.kin" value="{{data.saves.willpower.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.saves.willpower.spec" value="{{data.saves.willpower.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.saves.willpower.modifier" value="{{data.saves.willpower.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+            </table>
 
 
-        </div>
 
 
-        <div class="flexrow gridatt">
-            <label> SAVES </label>
-            <label> Stat </label>
-            <label> Level </label>
-            <label> Kin </label>
-            <label> Spec </label>
-            <Label> RollMod  </Label>
-        </div>
-        {{#each data.saves as |saves key|}}
-        <div class="flexrow gridatt">
-            <span class="ability-mod rollable" data-roll="d100x>95 + {{saves.value}} + {{saves.modifier}}" data-label="{{saves.label}} RollMod:{{saves.modifier}}">{{saves.label}}:{{saves.value}} </span>
-            <input type="text" name="data.saves.{{key}}.stat" value="{{saves.stat}}" data-dtype="Number"/>
-            <input type="text" name="data.saves.{{key}}.lvl" value="{{saves.lvl}}" data-dtype="Number"/>
-            <input type="text" name="data.saves.{{key}}.kin" value="{{saves.kin}}" data-dtype="Number"/>
-            <input type="text" name="data.saves.{{key}}.spec" value="{{saves.spec}}" data-dtype="Number"/>
-            <input type="text" name="data.saves.{{key}}.modifier" value="{{saves.modifier}}" data-dtype="Number"/>
-        </div>
-        {{/each}}
 
         <div class="flexrow gridatt">
             <label> ARMOR  </label>
