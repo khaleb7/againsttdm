@@ -77,6 +77,31 @@
         </div>
     </header>
 
+    <style>
+        #againsttdm {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #againsttdm td, #againsttdm th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #againsttdm tr:nth-child(even){background-color: #f2f2f2;}
+
+        #againsttdm tr:hover {background-color: #ddd;}
+
+        #againsttdm th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
@@ -144,6 +169,27 @@
                 <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
             </div>
             {{/each}}
+
+            <table id="customers">
+                <tr>
+                    <th>STATS</th>
+                    <th>Base</th>
+                    <th>Kin</th>
+                    <th>Spec</th>
+                    <th>Total</th>
+                </tr>
+                {{#each data.saves as |saves key|}}
+                <tr>
+                    <td><label for="data.stats.{{key}}.value" class="attribute-label">{{stats.label}}</label></td>
+                    <td> <input type="text" name="data.stats.{{key}}.base" value="{{stats.base}}" data-dtype="Number"/></td>
+                    <td><input type="text" name="data.stats.{{key}}.kin" value="{{stats.kin}}" data-dtype="Number"/></td>
+                    <td><input type="text" name="data.stats.{{key}}.spec" value="{{stats.spec}}" data-dtype="Number"/></td>
+                    <td><input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/></td>
+                </tr>
+                {{/each}}
+            </table>
+
+
         </div>
 
 
