@@ -13,66 +13,12 @@
                 and it will add a small amount of padding, a border, and will
                 center all of its child elements content and text. --}}
 
-                <div class="resources flex-group-left">
-                    <label for="data.kin.value" class="attribute-label">Kin</label>
-                    <div class="resource-content flexrow flex-center flex-group-center">
-                        <input type="text" name="data.kin.value" value="{{data.kin.value}}" data-dtype="String"/>
-                    </div>
-                </div>
-                <div class="resources sflex-group-left">
-                    <label for="data.vocation.value" class="attribute-label">Vocation</label>
-                    <div class="resource-content flexrow flex-center flex-group-center">
-                        <input type="text" name="data.vocation.value" value="{{data.vocation.value}}" data-dtype="String"/>
-                    </div>
-                </div>
-                <div class="resources flex-group-left">
-                    <label for="data.culture.value" class="attribute-label">Culture</label>
-                    <div class="resource-content flexrow flex-center flex-group-center">
-                        <input type="text" name="data.culture.value" value="{{data.culture.value}}" data-dtype="String"/>
-                    </div>
-                </div>
-                <div class="resources flex-group-center">
-                    <label for="data.xp.value" class="attribute-label">XP : Level</label>
-                    <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="data.xp.value" value="{{data.xp.value}}" data-dtype="Number"/>
-                        <span> : </span>
-                        <input type="text" name="data.level.value" value="{{data.level.value}}" data-dtype="Number"/>
-                    </div>
-                </div>
+
+
+
 
             </div>
-            <div class="resources grid gridatt">
 
-                <div class="resources flex-group-center">
-                    <label for="data.hitPoints.value" class="attribute-label">HP</label>
-                    <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="data.hitPoints.value" value="{{data.hitPoints.value}}" data-dtype="Number"/>
-                        <span> / </span>
-                        <input type="text" name="data.hitPoints.max" value="{{data.hitPoints.max}}" data-dtype="Number"/>
-                    </div>
-                </div>
-                <div class="resources flex-group-center">
-                    <label for="data.magicPoints.value" class="attribute-label">Magic</label>
-                    <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="data.magicPoints.value" value="{{data.magicPoints.value}}" data-dtype="Number"/>
-                        <span> / </span>
-                        <input type="text" name="data.magicPoints.max" value="{{data.magicPoints.max}}" data-dtype="Number"/>
-                    </div>
-                </div>
-                <div class="resources flex-group-left">
-                    <label for="data.moveRate.value" class="attribute-label">Move</label>
-                    <div class="resource-content flexrow flex-center flex-group-center">
-                        <input type="text" name="data.moveRate.value" value="{{data.moveRate.value}}" data-dtype="Number"/>
-                    </div>
-                </div>
-                <div class="resources flex-group-left">
-                    <label for="data.defense.value" class="attribute-label">Defense</label>
-                    <div class="resource-content flexrow flex-center flex-group-center">
-                        <input type="text" name="data.defense.value" value="{{data.defense.value}}" data-dtype="Number"/>
-                    </div>
-                </div>
-
-            </div>
 
         </div>
     </header>
@@ -87,7 +33,6 @@
         #againsttdm td, #againsttdm th {
             border: 1px solid #ddd;
             padding: 2px;
-            border-radius: 25px;
         }
 
         #againsttdm tr:nth-child(even){background-color: #f2f2f2;}
@@ -95,15 +40,64 @@
         #againsttdm tr:hover {background-color: #ddd;}
 
         #againsttdm th {
-            padding-top: 6px;
-            padding-bottom: 6px;
-            text-align: left;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            text-align: center;
             background-color: #4CAF50;
             color: white;
         }
     </style>
+    <table id="againsttdm">
+        <tr>
+            <th>Kin</th>
+            <th>Culture </th>
+            <th>Vocation</th>
 
-    {{!-- Sheet Tab Navigation --}}
+        </tr>
+        <tr>
+            <td><input type="text" name="data.kin.value" value="{{data.kin.value}}" data-dtype="String"/></td>
+            <td><input type="text" name="data.culture.value" value="{{data.culture.value}}" data-dtype="String"/></td></td>
+            <td><input type="text" name="data.vocation.value" value="{{data.vocation.value}}" data-dtype="String"/></td></td>
+        </tr>
+    </table>
+    <table id="againsttdm">
+        <tr>
+            <th>Hit Points</th>
+            <th>Magic Points</th>
+            <th>XP Points</th>
+            <th>Drive Points</th>
+            <th>Level</th>
+            <th>Heroic Path</th>
+            <th>Movement</th>
+            <th>Defense</th>
+
+        </tr>
+        <tr>
+            <td> Current</td>
+            <td><input type="text" name="data.hitPoints.value" value="{{data.hitPoints.value}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.magicPoints.value" value="{{data.magicPoints.value}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.xp.value" value="{{data.xp.value}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.drivePoints.value" value="{{data.drivePoints.value}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.level.value" value="{{data.level.value}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.drivePoints.min" value="{{data.drivePoints.min}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.moveRate.value" value="{{data.moveRate.value}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.defense.value" value="{{data.defense.value}}" data-dtype="Number"/></td>
+        </tr>
+        <tr>
+            <td> Maximum</td>
+            <td><input type="text" name="data.hitPoints.max" value="{{data.hitPoints.max}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.magicPoints.max" value="{{data.magicPoints.max}}" data-dtype="Number"/></td>
+            <td></td>
+            <td></td>
+            <td>10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+
+        {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
         <a class="item" data-tab="skills">Details</a>
@@ -122,42 +116,32 @@
 
 
         <div class="detail" data-group="primary" data-tab="Details">
-            <div class="resources grid grid-1col">
-                <div class="resource flex-group-left">
-                    <label for="data.narrative.nature.value" class="attribute-label">Nature</label>
-                    <div class="resource-content flexrow flex-center flex-group-center">
-                        <input type="text" name="data.narrative.nature.value" value="{{data.narrative.nature.value}}" data-dtype="String"/>
-                    </div>
-                </div>
-                <div class="resources flex-group-left">
-                    <label for="data.narrative.motivation.value" class="attribute-label">Motivation</label>
-                    <div class="resource-content flexrow flex-center flex-group-center">
-                        <input type="text" name="data.narrative.motivation.value" value="{{data.narrative.motivation.value}}" data-dtype="String"/>
-                    </div>
-                </div>
-                <div class="resources flex-group-left">
-                    <label for="data.narrative.allegiance.value" class="attribute-label">Allegiance</label>
-                    <div class="resource-content flexrow flex-center flex-group-center">
-                        <input type="text" name="data.narrative.allegiance.value" value="{{data.narrative.allegiance.value}}" data-dtype="String"/>
-                    </div>
-                </div>
-                <div class="resources flex-group-left">
-                    <label for="data.narrative.heroicPath.value" class="attribute-label">Heroic Path</label>
-                    <div class="resource-content flexrow flex-center flex-group-center">
-                        <input type="text" name="data.narrative.heroicPath.value" value="{{data.narrative.heroicPath.value}}" data-dtype="Number"/>
-                    </div>
-                </div>
-                <div class="flex-group-left">
-                    <label for="data.narrative.drivePoints.value" class="attribute-label">Drive Points</label>
-                    <div class="resource-content flexrow flex-center flex-group-center">
-                        <input type="text" name="data.narrative.drivePoints.value" value="{{data.narrative.drivePoints.value}}" data-dtype="Number"/>
-                    </div>
-                </div>
-            </div>
+
+
 
             <table id="againsttdm">
                 <tr>
-                    <th>-Statistics-</th>
+                    <th>Passions</th>
+                    <th> </th>
+
+                </tr>
+                <tr>
+                    <td><label>Nature</label></td>
+                    <td><input type="text" name="data.narrative.nature.value" value="{{data.narrative.nature.value}}" data-dtype="String"/></td>
+                </tr>
+                <tr>
+                    <td><label>Motivation</label></td>
+                    <td><input type="text" name="data.narrative.motivation.value" value="{{data.narrative.motivation.value}}" data-dtype="String"/></td>
+                </tr>
+                <tr>
+                    <td><label>Allegiance</label></td>
+                    <td><input type="text" name="data.narrative.allegiance.value" value="{{data.narrative.allegiance.value}}" data-dtype="String"/></td>
+                </tr>
+            </table>
+
+            <table id="againsttdm">
+                <tr>
+                    <th>Statistics</th>
                     <th>Base</th>
                     <th>Kin</th>
                     <th>Special</th>
@@ -208,7 +192,7 @@
             </table>
             <table id="againsttdm">
                 <tr>
-                    <th>-Save Rolls-</th>
+                    <th>Save Rolls</th>
                     <th>Stat</th>
                     <th>Level</th>
                     <th>Kin</th>
@@ -234,7 +218,7 @@
             </table>
             <table id="againsttdm">
                 <tr>
-                    <th>-Armor Skill-</th>
+                    <th>Armor Skill</th>
                     <th>Stat</th>
                     <th>#Ranks</th>
                     <th>Bonus</th>
@@ -258,7 +242,7 @@
             </table>
             <table id="againsttdm">
                 <tr>
-                    <th>-Combat Skills-</th>
+                    <th>Combat Skills</th>
                     <th>Stat</th>
                     <th>#Ranks</th>
                     <th>Bonus</th>
@@ -326,7 +310,7 @@
             </table>
             <table id="againsttdm">
                 <tr>
-                    <th>-Adventuring Skills-</th>
+                    <th>Adventuring Skills</th>
                     <th>Stat</th>
                     <th>#Ranks</th>
                     <th>Bonus</th>
@@ -394,7 +378,7 @@
             </table>
             <table id="againsttdm">
                 <tr>
-                    <th>-Roguery Skills-</th>
+                    <th>Roguery Skills</th>
                     <th>Stat</th>
                     <th>#Ranks</th>
                     <th>Bonus</th>
@@ -463,7 +447,7 @@
 
             <table id="againsttdm">
                 <tr>
-                    <th>-Lore Skills-</th>
+                    <th>Lore Skills</th>
                     <th>Stat</th>
                     <th>#Ranks</th>
                     <th>Bonus</th>
@@ -532,7 +516,7 @@
 
             <table id="againsttdm">
                 <tr>
-                    <th>-Body Skill-</th>
+                    <th>Body Skill</th>
                     <th>Stat</th>
                     <th>#Ranks</th>
                     <th>Bonus</th>
