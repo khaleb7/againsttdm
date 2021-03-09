@@ -170,7 +170,7 @@
             </div>
             {{/each}}
 
-            <table id="customers">
+            <table id="againsttdm">
                 <tr>
                     <th>STATS</th>
                     <th>Base</th>
@@ -178,15 +178,13 @@
                     <th>Spec</th>
                     <th>Total</th>
                 </tr>
-                {{#each data.saves as |saves key|}}
                 <tr>
-                    <td><label for="data.stats.{{key}}.value" class="attribute-label">{{stats.label}}</label></td>
-                    <td> <input type="text" name="data.stats.{{key}}.base" value="{{stats.base}}" data-dtype="Number"/></td>
-                    <td><input type="text" name="data.stats.{{key}}.kin" value="{{stats.kin}}" data-dtype="Number"/></td>
-                    <td><input type="text" name="data.stats.{{key}}.spec" value="{{stats.spec}}" data-dtype="Number"/></td>
-                    <td><input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/></td>
+                    <td><label for="data.stats.brn.value" class="attribute-label">{{stats.brn.label}}</label></td>
+                    <td> <input type="text" name="data.stats.brn.base" value="{{data.stats.brn.base}}" data-dtype="Number"/></td>
+                    <td><input type="text" name="data.stats.brn.kin" value="{{data.stats.brn.kin}}" data-dtype="Number"/></td>
+                    <td><input type="text" name="data.stats.brn.spec" value="{{data.stats.brn.spec}}" data-dtype="Number"/></td>
+                    <td><input type="text" name="data.stats.brn.value" value="{{data.stats.brn.value}}" data-dtype="Number"/></td>
                 </tr>
-                {{/each}}
             </table>
 
 
