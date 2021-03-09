@@ -147,7 +147,7 @@
         </div>
 
 
-        <div class="grid-6col gridatt">
+        <div class="flexrow gridatt">
             <label> SAVES </label>
             <label> Stat </label>
             <label> Level </label>
@@ -156,7 +156,7 @@
             <Label> RollMod  </Label>
         </div>
         {{#each data.saves as |saves key|}}
-        <div class="grid-6col gridatt">
+        <div class="flexrow gridatt">
             <span class="ability-mod rollable" data-roll="d100x>95 + {{saves.value}} + {{saves.modifier}}" data-label="{{saves.label}} RollMod:{{saves.modifier}}">{{saves.label}}:{{saves.value}} </span>
             <input type="text" name="data.saves.{{key}}.stat" value="{{saves.stat}}" data-dtype="Number"/>
             <input type="text" name="data.saves.{{key}}.lvl" value="{{saves.lvl}}" data-dtype="Number"/>
@@ -166,92 +166,7 @@
         </div>
         {{/each}}
 
-        <style>
-            #customers {
-                font-family: Arial, Helvetica, sans-serif;
-                border-collapse: collapse;
-                width: 100%;
-            }
-
-            #customers td, #customers th {
-                border: 1px solid #ddd;
-                padding: 8px;
-            }
-
-            #customers tr:nth-child(even){background-color: #f2f2f2;}
-
-            #customers tr:hover {background-color: #ddd;}
-
-            #customers th {
-                padding-top: 12px;
-                padding-bottom: 12px;
-                text-align: left;
-                background-color: #4CAF50;
-                color: white;
-            }
-        </style>
-
-
-
-        <table id="customers">
-            <tr>
-                <th>Company</th>
-                <th>Contact</th>
-                <th>Country</th>
-            </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td>Germany</td>
-            </tr>
-            <tr>
-                <td>Berglunds snabbköp</td>
-                <td>Christina Berglund</td>
-                <td>Sweden</td>
-            </tr>
-            <tr>
-                <td>Centro comercial Moctezuma</td>
-                <td>Francisco Chang</td>
-                <td>Mexico</td>
-            </tr>
-            <tr>
-                <td>Ernst Handel</td>
-                <td>Roland Mendel</td>
-                <td>Austria</td>
-            </tr>
-            <tr>
-                <td>Island Trading</td>
-                <td>Helen Bennett</td>
-                <td>UK</td>
-            </tr>
-            <tr>
-                <td>Königlich Essen</td>
-                <td>Philip Cramer</td>
-                <td>Germany</td>
-            </tr>
-            <tr>
-                <td>Laughing Bacchus Winecellars</td>
-                <td>Yoshi Tannamuri</td>
-                <td>Canada</td>
-            </tr>
-            <tr>
-                <td>Magazzini Alimentari Riuniti</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
-            </tr>
-            <tr>
-                <td>North/South</td>
-                <td>Simon Crowther</td>
-                <td>UK</td>
-            </tr>
-            <tr>
-                <td>Paris spécialités</td>
-                <td>Marie Bertrand</td>
-                <td>France</td>
-            </tr>
-        </table>
-
-        <div class="gridatt">
+        <div class="flexrow gridatt">
             <label> ARMOR  </label>
             <label> Stat </label>
             <label> #Ranks </label>
@@ -263,7 +178,7 @@
             <Label> RollMod  </Label>
         </div>
         {{#each data.armorSkills as |armorSkills key|}}
-        <div class="gridatt">
+        <div class="flexrow gridatt">
             <span class="ability-mod rollable" data-roll="d100x>95 + {{armorSkills.value}} + {{armorSkills.modifier}}" data-label="{{armorSkills.label}} RollMod:{{armorSkills.modifier}}">{{armorSkills.label}}:{{armorSkills.value}}</span>
             <input type="text" name="data.armorSkills.{{key}}.stat" value="{{armorSkills.stat}}" data-dtype="Number"/>
             <input type="text" name="data.armorSkills.{{key}}.rank" value="{{armorSkills.rank}}" data-dtype="Number"/>
@@ -275,7 +190,7 @@
             <input type="text" name="data.armorSkills.{{key}}.value" value="{{armorSkills.value}}" data-dtype="Number"/>
         </div>
         {{/each}}
-        <div class="gridatt">
+        <div class="flexrow gridatt">
             <label> COMBAT </label>
             <label> Stat </label>
             <label> #Ranks </label>
@@ -287,7 +202,7 @@
             <Label> RollMod  </Label>
         </div>
         {{#each data.combatSkills as |combatSkills key|}}
-        <div class="gridatt">
+        <div class="flexrow gridatt">
             <span class="ability-mod rollable" data-roll="d100x>95 + {{combatSkills.value}} + {{combatSkills.modifier}}" data-label="{{combatSkills.label}} RollMod:{{combatSkills.modifier}}">{{combatSkills.label}}:{{combatSkills.value}}</span>
             <input type="text" name="data.combatSkills.{{key}}.stat" value="{{combatSkills.stat}}" data-dtype="Number"/>
             <input type="text" name="data.combatSkills.{{key}}.rank" value="{{combatSkills.rank}}" data-dtype="Number"/>
@@ -299,7 +214,7 @@
             <input type="text" name="data.combatSkills.{{key}}.modifier" value="{{combatSkills.modifier}}" data-dtype="Number"/>
         </div>
         {{/each}}
-        <div class="gridatt">
+        <div class="flexrow gridatt">
             <label> ADVENTURING </label>
             <label> Stat </label>
             <label> #Ranks </label>
@@ -311,7 +226,7 @@
             <Label> RollMod  </Label>
         </div>
         {{#each data.adventuringSkills as |adventuringSkills key|}}
-        <div class="gridatt">
+        <div class="flexrow gridatt">
             <span class="ability-mod rollable" data-roll="d100x>95 + {{adventuringSkills.value}} + {{adventuringSkills.modifier}}" data-label="{{adventuringSkills.label}} RollMod:{{adventuringSkills.modifier}}">{{adventuringSkills.label}}:{{adventuringSkills.value}}</span>
             <input type="text" name="data.adventuringSkills.{{key}}.stat" value="{{adventuringSkills.stat}}" data-dtype="Number"/>
             <input type="text" name="data.adventuringSkills.{{key}}.rank" value="{{adventuringSkills.rank}}" data-dtype="Number"/>
@@ -323,7 +238,7 @@
             <input type="text" name="data.adventuringSkills.{{key}}.modifier" value="{{adventuringSkills.modifier}}" data-dtype="Number"/>
         </div>
         {{/each}}
-        <div class="gridatt">
+        <div class="flexrow gridatt">
             <label> ROGUERY </label>
             <label> Stat </label>
             <label> #Ranks </label>
@@ -335,7 +250,7 @@
             <Label> RollMod  </Label>
         </div>
         {{#each data.roguerySkills as |roguerySkills key|}}
-        <div class="gridatt">
+        <div class="flexrow gridatt">
             <span class="ability-mod rollable" data-roll="d100x>95 + {{roguerySkills.value}} + {{roguerySkills.modifier}}" data-label="{{roguerySkills.label}} RollMod:{{roguerySkills.modifier}}">{{roguerySkills.label}}:{{roguerySkills.value}}</span>
             <input type="text" name="data.roguerySkills.{{key}}.stat" value="{{roguerySkills.stat}}" data-dtype="Number"/>
             <input type="text" name="data.roguerySkills.{{key}}.rank" value="{{roguerySkills.rank}}" data-dtype="Number"/>
@@ -347,7 +262,7 @@
             <input type="text" name="data.roguerySkills.{{key}}.modifier" value="{{roguerySkills.modifier}}" data-dtype="Number"/>
         </div>
         {{/each}}
-        <div class="gridatt">
+        <div class="flexrow gridatt">
             <label> LORE </label>
             <label> Stat </label>
             <label> #Ranks </label>
@@ -359,7 +274,7 @@
             <Label> RollMod  </Label>
         </div>
         {{#each data.loreSkills as |loreSkills key|}}
-        <div class="gridatt">
+        <div class="flexrow gridatt">
             <span class="ability-mod rollable" data-roll="d100x>95 + {{loreSkills.value}} + {{loreSkills.modifier}}" data-label="{{loreSkills.label}} RollMod:{{loreSkills.modifier}}">{{loreSkills.label}}:{{loreSkills.value}}</span>
             <input type="text" name="data.loreSkills.{{key}}.stat" value="{{loreSkills.stat}}" data-dtype="Number"/>
             <input type="text" name="data.loreSkills.{{key}}.rank" value="{{loreSkills.rank}}" data-dtype="Number"/>
@@ -372,7 +287,7 @@
         </div>
         {{/each}}
 
-        <div class="gridatt">
+        <div class="flexrow gridatt">
             <label> BODY </label>
             <label> Stat </label>
             <label> #Ranks </label>
@@ -384,7 +299,7 @@
             <Label> RollMod  </Label>
         </div>
         {{#each data.bodySkills as |bodySkills key|}}
-        <div class="gridatt">
+        <div class="flexrow gridatt">
             <span class="ability-mod rollable" data-roll="d100x>95 + {{bodySkills.value}} + {{bodySkills.modifier}}" data-label="{{bodySkills.label}} RollMod:{{bodySkills.modifier}}">{{bodySkills.label}}:{{bodySkills.value}}</span>
             <input type="text" name="data.bodySkills.{{key}}.stat" value="{{bodySkills.stat}}" data-dtype="Number"/>
             <input type="text" name="data.bodySkills.{{key}}.rank" value="{{bodySkills.rank}}" data-dtype="Number"/>
