@@ -86,7 +86,8 @@
 
         #againsttdm td, #againsttdm th {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 2px;
+            border-radius: 25px;
         }
 
         #againsttdm tr:nth-child(even){background-color: #f2f2f2;}
@@ -94,8 +95,8 @@
         #againsttdm tr:hover {background-color: #ddd;}
 
         #againsttdm th {
-            padding-top: 12px;
-            padding-bottom: 12px;
+            padding-top: 6px;
+            padding-bottom: 6px;
             text-align: left;
             background-color: #4CAF50;
             color: white;
@@ -156,10 +157,10 @@
 
             <table id="againsttdm">
                 <tr>
-                    <th>STAT</th>
+                    <th>-Statistics-</th>
                     <th>Base</th>
                     <th>Kin</th>
-                    <th>Spec</th>
+                    <th>Special</th>
                     <th>Total</th>
                 </tr>
                 <tr>
@@ -207,11 +208,11 @@
             </table>
             <table id="againsttdm">
                 <tr>
-                    <th>SAVES</th>
+                    <th>-Save Rolls-</th>
                     <th>Stat</th>
                     <th>Level</th>
                     <th>Kin</th>
-                    <th>Spec</th>
+                    <th>Special</th>
                     <th>RollMod</th>
                 </tr>
                 <tr>
@@ -231,156 +232,331 @@
                     <td><input type="text" name="data.saves.willpower.modifier" value="{{data.saves.willpower.modifier}}" data-dtype="Number" placeholder="0"/></td>
                 </tr>
             </table>
+            <table id="againsttdm">
+                <tr>
+                    <th>-Armor Skill-</th>
+                    <th>Stat</th>
+                    <th>#Ranks</th>
+                    <th>Bonus</th>
+                    <th>Vocation</th>
+                    <th>Kin</th>
+                    <th>Special</th>
+                    <th>Item</th>
+                    <th>RollMod</th>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.armorSkills.armor.value}} + {{data.armorSkills.armor.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.armorSkills.armor.label}}:{{data.armorSkills.armor.value}} </span></td>
+                    <td> <input type="text" name="data.armorSkills.armor.stat" value="{{data.armorSkills.armor.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.armorSkills.armor.rank" value="{{data.armorSkills.armor.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.armorSkills.armor.rankBonus" value="{{data.armorSkills.armor.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.armorSkills.armor.voc" value="{{data.armorSkills.armor.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.armorSkills.armor.kin" value="{{data.armorSkills.armor.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.armorSkills.armor.spec" value="{{data.armorSkills.armor.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.armorSkills.armor.item" value="{{data.armorSkills.armor.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.armorSkills.armor.modifier" value="{{data.armorSkills.armor.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+            </table>
+            <table id="againsttdm">
+                <tr>
+                    <th>-Combat Skills-</th>
+                    <th>Stat</th>
+                    <th>#Ranks</th>
+                    <th>Bonus</th>
+                    <th>Vocation</th>
+                    <th>Kin</th>
+                    <th>Special</th>
+                    <th>Item</th>
+                    <th>RollMod</th>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.combatSkills.blunt.value}} + {{data.combatSkills.blunt.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.combatSkills.blunt.label}}:{{data.combatSkills.blunt.value}} </span></td>
+                    <td> <input type="text" name="data.combatSkills.blunt.stat" value="{{data.combatSkills.blunt.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blunt.rank" value="{{data.combatSkills.blunt.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blunt.rankBonus" value="{{data.combatSkills.blunt.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blunt.voc" value="{{data.combatSkills.blunt.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blunt.kin" value="{{data.combatSkills.blunt.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blunt.spec" value="{{data.combatSkills.blunt.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blunt.item" value="{{data.combatSkills.blunt.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blunt.modifier" value="{{data.combatSkills.blunt.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.combatSkills.blades.value}} + {{data.combatSkills.blades.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.combatSkills.blades.label}}:{{data.combatSkills.blades.value}} </span></td>
+                    <td> <input type="text" name="data.combatSkills.blades.stat" value="{{data.combatSkills.blades.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blades.rank" value="{{data.combatSkills.blades.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blades.rankBonus" value="{{data.combatSkills.blades.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blades.voc" value="{{data.combatSkills.blades.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blades.kin" value="{{data.combatSkills.blades.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blades.spec" value="{{data.combatSkills.blades.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blades.item" value="{{data.combatSkills.blades.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.blades.modifier" value="{{data.combatSkills.blades.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.combatSkills.ranged.value}} + {{data.combatSkills.ranged.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.combatSkills.ranged.label}}:{{data.combatSkills.ranged.value}} </span></td>
+                    <td> <input type="text" name="data.combatSkills.ranged.stat" value="{{data.combatSkills.ranged.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.ranged.rank" value="{{data.combatSkills.ranged.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.ranged.rankBonus" value="{{data.combatSkills.ranged.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.ranged.voc" value="{{data.combatSkills.ranged.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.ranged.kin" value="{{data.combatSkills.ranged.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.ranged.spec" value="{{data.combatSkills.ranged.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.ranged.item" value="{{data.combatSkills.ranged.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.ranged.modifier" value="{{data.combatSkills.ranged.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.combatSkills.polearms.value}} + {{data.combatSkills.polearms.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.combatSkills.polearms.label}}:{{data.combatSkills.polearms.value}} </span></td>
+                    <td> <input type="text" name="data.combatSkills.polearms.stat" value="{{data.combatSkills.polearms.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.polearms.rank" value="{{data.combatSkills.polearms.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.polearms.rankBonus" value="{{data.combatSkills.polearms.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.polearms.voc" value="{{data.combatSkills.polearms.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.polearms.kin" value="{{data.combatSkills.polearms.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.polearms.spec" value="{{data.combatSkills.polearms.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.polearms.item" value="{{data.combatSkills.polearms.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.polearms.modifier" value="{{data.combatSkills.polearms.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.combatSkills.brawl.value}} + {{data.combatSkills.brawl.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.combatSkills.brawl.label}}:{{data.combatSkills.brawl.value}} </span></td>
+                    <td> <input type="text" name="data.combatSkills.brawl.stat" value="{{data.combatSkills.brawl.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.brawl.rank" value="{{data.combatSkills.brawl.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.brawl.rankBonus" value="{{data.combatSkills.brawl.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.brawl.voc" value="{{data.combatSkills.brawl.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.brawl.kin" value="{{data.combatSkills.brawl.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.brawl.spec" value="{{data.combatSkills.brawl.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.brawl.item" value="{{data.combatSkills.brawl.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.combatSkills.brawl.modifier" value="{{data.combatSkills.brawl.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+            </table>
+            <table id="againsttdm">
+                <tr>
+                    <th>-Adventuring Skills-</th>
+                    <th>Stat</th>
+                    <th>#Ranks</th>
+                    <th>Bonus</th>
+                    <th>Vocation</th>
+                    <th>Kin</th>
+                    <th>Special</th>
+                    <th>Item</th>
+                    <th>RollMod</th>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.adventuringSkills.athletics.value}} + {{data.adventuringSkills.athletics.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.adventuringSkills.athletics.label}}:{{data.adventuringSkills.athletics.value}} </span></td>
+                    <td> <input type="text" name="data.adventuringSkills.athletics.stat" value="{{data.adventuringSkills.athletics.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.athletics.rank" value="{{data.adventuringSkills.athletics.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.athletics.rankBonus" value="{{data.adventuringSkills.athletics.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.athletics.voc" value="{{data.adventuringSkills.athletics.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.athletics.kin" value="{{data.adventuringSkills.athletics.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.athletics.spec" value="{{data.adventuringSkills.athletics.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.athletics.item" value="{{data.adventuringSkills.athletics.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.athletics.modifier" value="{{data.adventuringSkills.athletics.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.adventuringSkills.ride.value}} + {{data.adventuringSkills.ride.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.adventuringSkills.ride.label}}:{{data.adventuringSkills.ride.value}} </span></td>
+                    <td> <input type="text" name="data.adventuringSkills.ride.stat" value="{{data.adventuringSkills.ride.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.ride.rank" value="{{data.adventuringSkills.ride.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.ride.rankBonus" value="{{data.adventuringSkills.ride.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.ride.voc" value="{{data.adventuringSkills.ride.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.ride.kin" value="{{data.adventuringSkills.ride.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.ride.spec" value="{{data.adventuringSkills.ride.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.ride.item" value="{{data.adventuringSkills.ride.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.ride.modifier" value="{{data.adventuringSkills.ride.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.adventuringSkills.hunting.value}} + {{data.adventuringSkills.hunting.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.adventuringSkills.hunting.label}}:{{data.adventuringSkills.hunting.value}} </span></td>
+                    <td> <input type="text" name="data.adventuringSkills.hunting.stat" value="{{data.adventuringSkills.hunting.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.hunting.rank" value="{{data.adventuringSkills.hunting.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.hunting.rankBonus" value="{{data.adventuringSkills.hunting.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.hunting.voc" value="{{data.adventuringSkills.hunting.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.hunting.kin" value="{{data.adventuringSkills.hunting.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.hunting.spec" value="{{data.adventuringSkills.hunting.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.hunting.item" value="{{data.adventuringSkills.hunting.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.hunting.modifier" value="{{data.adventuringSkills.hunting.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.adventuringSkills.nature.value}} + {{data.adventuringSkills.nature.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.adventuringSkills.nature.label}}:{{data.adventuringSkills.nature.value}} </span></td>
+                    <td> <input type="text" name="data.adventuringSkills.nature.stat" value="{{data.adventuringSkills.nature.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.nature.rank" value="{{data.adventuringSkills.nature.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.nature.rankBonus" value="{{data.adventuringSkills.nature.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.nature.voc" value="{{data.adventuringSkills.nature.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.nature.kin" value="{{data.adventuringSkills.nature.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.nature.spec" value="{{data.adventuringSkills.nature.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.nature.item" value="{{data.adventuringSkills.nature.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.nature.modifier" value="{{data.adventuringSkills.nature.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.adventuringSkills.wandering.value}} + {{data.adventuringSkills.wandering.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.adventuringSkills.wandering.label}}:{{data.adventuringSkills.wandering.value}} </span></td>
+                    <td> <input type="text" name="data.adventuringSkills.wandering.stat" value="{{data.adventuringSkills.wandering.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.wandering.rank" value="{{data.adventuringSkills.wandering.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.wandering.rankBonus" value="{{data.adventuringSkills.wandering.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.wandering.voc" value="{{data.adventuringSkills.wandering.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.wandering.kin" value="{{data.adventuringSkills.wandering.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.wandering.spec" value="{{data.adventuringSkills.wandering.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.wandering.item" value="{{data.adventuringSkills.wandering.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.adventuringSkills.wandering.modifier" value="{{data.adventuringSkills.wandering.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+            </table>
+            <table id="againsttdm">
+                <tr>
+                    <th>-Roguery Skills-</th>
+                    <th>Stat</th>
+                    <th>#Ranks</th>
+                    <th>Bonus</th>
+                    <th>Vocation</th>
+                    <th>Kin</th>
+                    <th>Special</th>
+                    <th>Item</th>
+                    <th>RollMod</th>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.roguerySkills.acrobatics.value}} + {{data.roguerySkills.acrobatics.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.roguerySkills.acrobatics.label}}:{{data.roguerySkills.acrobatics.value}} </span></td>
+                    <td> <input type="text" name="data.roguerySkills.acrobatics.stat" value="{{data.roguerySkills.acrobatics.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.acrobatics.rank" value="{{data.roguerySkills.acrobatics.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.acrobatics.rankBonus" value="{{data.roguerySkills.acrobatics.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.acrobatics.voc" value="{{data.roguerySkills.acrobatics.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.acrobatics.kin" value="{{data.roguerySkills.acrobatics.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.acrobatics.spec" value="{{data.roguerySkills.acrobatics.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.acrobatics.item" value="{{data.roguerySkills.acrobatics.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.acrobatics.modifier" value="{{data.roguerySkills.acrobatics.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.roguerySkills.stealth.value}} + {{data.roguerySkills.stealth.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.roguerySkills.stealth.label}}:{{data.roguerySkills.stealth.value}} </span></td>
+                    <td> <input type="text" name="data.roguerySkills.stealth.stat" value="{{data.roguerySkills.stealth.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.stealth.rank" value="{{data.roguerySkills.stealth.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.stealth.rankBonus" value="{{data.roguerySkills.stealth.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.stealth.voc" value="{{data.roguerySkills.stealth.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.stealth.kin" value="{{data.roguerySkills.stealth.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.stealth.spec" value="{{data.roguerySkills.stealth.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.stealth.item" value="{{data.roguerySkills.stealth.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.stealth.modifier" value="{{data.roguerySkills.stealth.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.roguerySkills.locksAndtraps.value}} + {{data.roguerySkills.locksAndtraps.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.roguerySkills.locksAndtraps.label}}:{{data.roguerySkills.locksAndtraps.value}} </span></td>
+                    <td> <input type="text" name="data.roguerySkills.locksAndtraps.stat" value="{{data.roguerySkills.locksAndtraps.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.locksAndtraps.rank" value="{{data.roguerySkills.locksAndtraps.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.locksAndtraps.rankBonus" value="{{data.roguerySkills.locksAndtraps.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.locksAndtraps.voc" value="{{data.roguerySkills.locksAndtraps.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.locksAndtraps.kin" value="{{data.roguerySkills.locksAndtraps.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.locksAndtraps.spec" value="{{data.roguerySkills.locksAndtraps.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.locksAndtraps.item" value="{{data.roguerySkills.locksAndtraps.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.locksAndtraps.modifier" value="{{data.roguerySkills.locksAndtraps.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.roguerySkills.perception.value}} + {{data.roguerySkills.perception.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.roguerySkills.perception.label}}:{{data.roguerySkills.perception.value}} </span></td>
+                    <td> <input type="text" name="data.roguerySkills.perception.stat" value="{{data.roguerySkills.perception.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.perception.rank" value="{{data.roguerySkills.perception.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.perception.rankBonus" value="{{data.roguerySkills.perception.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.perception.voc" value="{{data.roguerySkills.perception.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.perception.kin" value="{{data.roguerySkills.perception.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.perception.spec" value="{{data.roguerySkills.perception.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.perception.item" value="{{data.roguerySkills.perception.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.perception.modifier" value="{{data.roguerySkills.perception.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.roguerySkills.deceive.value}} + {{data.roguerySkills.deceive.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.roguerySkills.deceive.label}}:{{data.roguerySkills.deceive.value}} </span></td>
+                    <td> <input type="text" name="data.roguerySkills.deceive.stat" value="{{data.roguerySkills.deceive.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.deceive.rank" value="{{data.roguerySkills.deceive.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.deceive.rankBonus" value="{{data.roguerySkills.deceive.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.deceive.voc" value="{{data.roguerySkills.deceive.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.deceive.kin" value="{{data.roguerySkills.deceive.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.deceive.spec" value="{{data.roguerySkills.deceive.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.deceive.item" value="{{data.roguerySkills.deceive.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.roguerySkills.deceive.modifier" value="{{data.roguerySkills.deceive.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+            </table>
+
+            <table id="againsttdm">
+                <tr>
+                    <th>-Lore Skills-</th>
+                    <th>Stat</th>
+                    <th>#Ranks</th>
+                    <th>Bonus</th>
+                    <th>Vocation</th>
+                    <th>Kin</th>
+                    <th>Special</th>
+                    <th>Item</th>
+                    <th>RollMod</th>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.loreSkills.arcana.value}} + {{data.loreSkills.arcana.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.loreSkills.arcana.label}}:{{data.loreSkills.arcana.value}} </span></td>
+                    <td> <input type="text" name="data.loreSkills.arcana.stat" value="{{data.loreSkills.arcana.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.arcana.rank" value="{{data.loreSkills.arcana.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.arcana.rankBonus" value="{{data.loreSkills.arcana.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.arcana.voc" value="{{data.loreSkills.arcana.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.arcana.kin" value="{{data.loreSkills.arcana.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.arcana.spec" value="{{data.loreSkills.arcana.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.arcana.item" value="{{data.loreSkills.arcana.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.arcana.modifier" value="{{data.loreSkills.arcana.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.loreSkills.charisma.value}} + {{data.loreSkills.charisma.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.loreSkills.charisma.label}}:{{data.loreSkills.charisma.value}} </span></td>
+                    <td> <input type="text" name="data.loreSkills.charisma.stat" value="{{data.loreSkills.charisma.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.charisma.rank" value="{{data.loreSkills.charisma.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.charisma.rankBonus" value="{{data.loreSkills.charisma.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.charisma.voc" value="{{data.loreSkills.charisma.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.charisma.kin" value="{{data.loreSkills.charisma.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.charisma.spec" value="{{data.loreSkills.charisma.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.charisma.item" value="{{data.loreSkills.charisma.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.charisma.modifier" value="{{data.loreSkills.charisma.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.loreSkills.cultures.value}} + {{data.loreSkills.cultures.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.loreSkills.cultures.label}}:{{data.loreSkills.cultures.value}} </span></td>
+                    <td> <input type="text" name="data.loreSkills.cultures.stat" value="{{data.loreSkills.cultures.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.cultures.rank" value="{{data.loreSkills.cultures.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.cultures.rankBonus" value="{{data.loreSkills.cultures.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.cultures.voc" value="{{data.loreSkills.cultures.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.cultures.kin" value="{{data.loreSkills.cultures.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.cultures.spec" value="{{data.loreSkills.cultures.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.cultures.item" value="{{data.loreSkills.cultures.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.cultures.modifier" value="{{data.loreSkills.cultures.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.loreSkills.healer.value}} + {{data.loreSkills.healer.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.loreSkills.healer.label}}:{{data.loreSkills.healer.value}} </span></td>
+                    <td> <input type="text" name="data.loreSkills.healer.stat" value="{{data.loreSkills.healer.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.healer.rank" value="{{data.loreSkills.healer.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.healer.rankBonus" value="{{data.loreSkills.healer.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.healer.voc" value="{{data.loreSkills.healer.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.healer.kin" value="{{data.loreSkills.healer.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.healer.spec" value="{{data.loreSkills.healer.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.healer.item" value="{{data.loreSkills.healer.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.healer.modifier" value="{{data.loreSkills.healer.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.loreSkills.songAndtales.value}} + {{data.loreSkills.songAndtales.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.loreSkills.songAndtales.label}}:{{data.loreSkills.songAndtales.value}} </span></td>
+                    <td> <input type="text" name="data.loreSkills.songAndtales.stat" value="{{data.loreSkills.songAndtales.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.songAndtales.rank" value="{{data.loreSkills.songAndtales.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.songAndtales.rankBonus" value="{{data.loreSkills.songAndtales.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.songAndtales.voc" value="{{data.loreSkills.songAndtales.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.songAndtales.kin" value="{{data.loreSkills.songAndtales.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.songAndtales.spec" value="{{data.loreSkills.songAndtales.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.songAndtales.item" value="{{data.loreSkills.songAndtales.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.loreSkills.songAndtales.modifier" value="{{data.loreSkills.songAndtales.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+            </table>
+
+            <table id="againsttdm">
+                <tr>
+                    <th>-Body Skill-</th>
+                    <th>Stat</th>
+                    <th>#Ranks</th>
+                    <th>Bonus</th>
+                    <th>Vocation</th>
+                    <th>Kin</th>
+                    <th>Special</th>
+                    <th>Item</th>
+                    <th>RollMod</th>
+                </tr>
+                <tr>
+                    <td><span class="ability-mod rollable" data-roll="d100x>95 + {{data.bodySkills.body.value}} + {{data.bodySkills.body.modifier}}" data-label="{{data.saves.toughness.label}} RollMod:{{data.saves.toughness.modifier}}">{{data.bodySkills.body.label}}:{{data.bodySkills.body.value}} </span></td>
+                    <td> <input type="text" name="data.bodySkills.body.stat" value="{{data.bodySkills.body.stat}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.bodySkills.body.rank" value="{{data.bodySkills.body.rank}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.bodySkills.body.rankBonus" value="{{data.bodySkills.body.rankBonus}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.bodySkills.body.voc" value="{{data.bodySkills.body.voc}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.bodySkills.body.kin" value="{{data.bodySkills.body.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.bodySkills.body.spec" value="{{data.bodySkills.body.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.bodySkills.body.item" value="{{data.bodySkills.body.item}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.bodySkills.body.modifier" value="{{data.bodySkills.body.modifier}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+
+            </table>
 
 
-
-
-
-        <div class="flexrow gridatt">
-            <label> ARMOR  </label>
-            <label> Stat </label>
-            <label> #Ranks </label>
-            <label> Bonus  </label>
-            <label> Voc </label>
-            <label> Kin </label>
-            <label> Spec </label>
-            <Label> Item </Label>
-            <Label> RollMod  </Label>
-        </div>
-        {{#each data.armorSkills as |armorSkills key|}}
-        <div class="flexrow gridatt">
-            <span class="ability-mod rollable" data-roll="d100x>95 + {{armorSkills.value}} + {{armorSkills.modifier}}" data-label="{{armorSkills.label}} RollMod:{{armorSkills.modifier}}">{{armorSkills.label}}:{{armorSkills.value}}</span>
-            <input type="text" name="data.armorSkills.{{key}}.stat" value="{{armorSkills.stat}}" data-dtype="Number"/>
-            <input type="text" name="data.armorSkills.{{key}}.rank" value="{{armorSkills.rank}}" data-dtype="Number"/>
-            <input type="text" name="data.armorSkills.{{key}}.rankBonus" value="{{armorSkills.rankBonus}}" data-dtype="Number"/>
-            <input type="text" name="data.armorSkills.{{key}}.voc" value="{{armorSkills.voc}}" data-dtype="Number"/>
-            <input type="text" name="data.armorSkills.{{key}}.kin" value="{{armorSkills.kin}}" data-dtype="Number"/>
-            <input type="text" name="data.armorSkills.{{key}}.spec" value="{{armorSkills.spec}}" data-dtype="Number"/>
-            <input type="text" name="data.armorSkills.{{key}}.item" value="{{armorSkills.item}}" data-dtype="Number"/>
-            <input type="text" name="data.armorSkills.{{key}}.value" value="{{armorSkills.value}}" data-dtype="Number"/>
-        </div>
-        {{/each}}
-        <div class="flexrow gridatt">
-            <label> COMBAT </label>
-            <label> Stat </label>
-            <label> #Ranks </label>
-            <label> Bonus  </label>
-            <label> Voc </label>
-            <label> Kin </label>
-            <label> Spec </label>
-            <Label> Item </Label>
-            <Label> RollMod  </Label>
-        </div>
-        {{#each data.combatSkills as |combatSkills key|}}
-        <div class="flexrow gridatt">
-            <span class="ability-mod rollable" data-roll="d100x>95 + {{combatSkills.value}} + {{combatSkills.modifier}}" data-label="{{combatSkills.label}} RollMod:{{combatSkills.modifier}}">{{combatSkills.label}}:{{combatSkills.value}}</span>
-            <input type="text" name="data.combatSkills.{{key}}.stat" value="{{combatSkills.stat}}" data-dtype="Number"/>
-            <input type="text" name="data.combatSkills.{{key}}.rank" value="{{combatSkills.rank}}" data-dtype="Number"/>
-            <input type="text" name="data.combatSkills.{{key}}.rankBonus" value="{{combatSkills.rankBonus}}" data-dtype="Number"/>
-            <input type="text" name="data.combatSkills.{{key}}.voc" value="{{combatSkills.voc}}" data-dtype="Number"/>
-            <input type="text" name="data.combatSkills.{{key}}.kin" value="{{combatSkills.kin}}" data-dtype="Number"/>
-            <input type="text" name="data.combatSkills.{{key}}.spec" value="{{combatSkills.spec}}" data-dtype="Number"/>
-            <input type="text" name="data.combatSkills.{{key}}.item" value="{{combatSkills.item}}" data-dtype="Number"/>
-            <input type="text" name="data.combatSkills.{{key}}.modifier" value="{{combatSkills.modifier}}" data-dtype="Number"/>
-        </div>
-        {{/each}}
-        <div class="flexrow gridatt">
-            <label> ADVENTURING </label>
-            <label> Stat </label>
-            <label> #Ranks </label>
-            <label> Bonus  </label>
-            <label> Voc </label>
-            <label> Kin </label>
-            <label> Spec </label>
-            <Label> Item </Label>
-            <Label> RollMod  </Label>
-        </div>
-        {{#each data.adventuringSkills as |adventuringSkills key|}}
-        <div class="flexrow gridatt">
-            <span class="ability-mod rollable" data-roll="d100x>95 + {{adventuringSkills.value}} + {{adventuringSkills.modifier}}" data-label="{{adventuringSkills.label}} RollMod:{{adventuringSkills.modifier}}">{{adventuringSkills.label}}:{{adventuringSkills.value}}</span>
-            <input type="text" name="data.adventuringSkills.{{key}}.stat" value="{{adventuringSkills.stat}}" data-dtype="Number"/>
-            <input type="text" name="data.adventuringSkills.{{key}}.rank" value="{{adventuringSkills.rank}}" data-dtype="Number"/>
-            <input type="text" name="data.adventuringSkills.{{key}}.rankBonus" value="{{adventuringSkills.rankBonus}}" data-dtype="Number"/>
-            <input type="text" name="data.adventuringSkills.{{key}}.voc" value="{{adventuringSkills.voc}}" data-dtype="Number"/>
-            <input type="text" name="data.adventuringSkills.{{key}}.kin" value="{{adventuringSkills.kin}}" data-dtype="Number"/>
-            <input type="text" name="data.adventuringSkills.{{key}}.spec" value="{{adventuringSkills.spec}}" data-dtype="Number"/>
-            <input type="text" name="data.adventuringSkills.{{key}}.item" value="{{adventuringSkills.item}}" data-dtype="Number"/>
-            <input type="text" name="data.adventuringSkills.{{key}}.modifier" value="{{adventuringSkills.modifier}}" data-dtype="Number"/>
-        </div>
-        {{/each}}
-        <div class="flexrow gridatt">
-            <label> ROGUERY </label>
-            <label> Stat </label>
-            <label> #Ranks </label>
-            <label> Bonus  </label>
-            <label> Voc </label>
-            <label> Kin </label>
-            <label> Spec </label>
-            <Label> Item </Label>
-            <Label> RollMod  </Label>
-        </div>
-        {{#each data.roguerySkills as |roguerySkills key|}}
-        <div class="flexrow gridatt">
-            <span class="ability-mod rollable" data-roll="d100x>95 + {{roguerySkills.value}} + {{roguerySkills.modifier}}" data-label="{{roguerySkills.label}} RollMod:{{roguerySkills.modifier}}">{{roguerySkills.label}}:{{roguerySkills.value}}</span>
-            <input type="text" name="data.roguerySkills.{{key}}.stat" value="{{roguerySkills.stat}}" data-dtype="Number"/>
-            <input type="text" name="data.roguerySkills.{{key}}.rank" value="{{roguerySkills.rank}}" data-dtype="Number"/>
-            <input type="text" name="data.roguerySkills.{{key}}.rankBonus" value="{{roguerySkills.rankBonus}}" data-dtype="Number"/>
-            <input type="text" name="data.roguerySkills.{{key}}.voc" value="{{roguerySkills.voc}}" data-dtype="Number"/>
-            <input type="text" name="data.roguerySkills.{{key}}.kin" value="{{roguerySkills.kin}}" data-dtype="Number"/>
-            <input type="text" name="data.roguerySkills.{{key}}.spec" value="{{roguerySkills.spec}}" data-dtype="Number"/>
-            <input type="text" name="data.roguerySkills.{{key}}.item" value="{{roguerySkills.item}}" data-dtype="Number"/>
-            <input type="text" name="data.roguerySkills.{{key}}.modifier" value="{{roguerySkills.modifier}}" data-dtype="Number"/>
-        </div>
-        {{/each}}
-        <div class="flexrow gridatt">
-            <label> LORE </label>
-            <label> Stat </label>
-            <label> #Ranks </label>
-            <label> Bonus  </label>
-            <label> Voc </label>
-            <label> Kin </label>
-            <label> Spec </label>
-            <Label> Item </Label>
-            <Label> RollMod  </Label>
-        </div>
-        {{#each data.loreSkills as |loreSkills key|}}
-        <div class="flexrow gridatt">
-            <span class="ability-mod rollable" data-roll="d100x>95 + {{loreSkills.value}} + {{loreSkills.modifier}}" data-label="{{loreSkills.label}} RollMod:{{loreSkills.modifier}}">{{loreSkills.label}}:{{loreSkills.value}}</span>
-            <input type="text" name="data.loreSkills.{{key}}.stat" value="{{loreSkills.stat}}" data-dtype="Number"/>
-            <input type="text" name="data.loreSkills.{{key}}.rank" value="{{loreSkills.rank}}" data-dtype="Number"/>
-            <input type="text" name="data.loreSkills.{{key}}.rankBonus" value="{{loreSkills.rankBonus}}" data-dtype="Number"/>
-            <input type="text" name="data.loreSkills.{{key}}.voc" value="{{loreSkills.voc}}" data-dtype="Number"/>
-            <input type="text" name="data.loreSkills.{{key}}.kin" value="{{loreSkills.kin}}" data-dtype="Number"/>
-            <input type="text" name="data.loreSkills.{{key}}.spec" value="{{loreSkills.spec}}" data-dtype="Number"/>
-            <input type="text" name="data.loreSkills.{{key}}.item" value="{{loreSkills.item}}" data-dtype="Number"/>
-            <input type="text" name="data.loreSkills.{{key}}.modifier" value="{{loreSkills.modifier}}" data-dtype="Number"/>
-        </div>
-        {{/each}}
-
-        <div class="flexrow gridatt">
-            <label> BODY </label>
-            <label> Stat </label>
-            <label> #Ranks </label>
-            <label> Bonus  </label>
-            <label> Voc </label>
-            <label> Kin </label>
-            <label> Spec </label>
-            <Label> Item </Label>
-            <Label> RollMod  </Label>
-        </div>
-        {{#each data.bodySkills as |bodySkills key|}}
-        <div class="flexrow gridatt">
-            <span class="ability-mod rollable" data-roll="d100x>95 + {{bodySkills.value}} + {{bodySkills.modifier}}" data-label="{{bodySkills.label}} RollMod:{{bodySkills.modifier}}">{{bodySkills.label}}:{{bodySkills.value}}</span>
-            <input type="text" name="data.bodySkills.{{key}}.stat" value="{{bodySkills.stat}}" data-dtype="Number"/>
-            <input type="text" name="data.bodySkills.{{key}}.rank" value="{{bodySkills.rank}}" data-dtype="Number"/>
-            <input type="text" name="data.bodySkills.{{key}}.rankBonus" value="{{bodySkills.rankBonus}}" data-dtype="Number"/>
-            <input type="text" name="data.bodySkills.{{key}}.voc" value="{{bodySkills.voc}}" data-dtype="Number"/>
-            <input type="text" name="data.bodySkills.{{key}}.kin" value="{{bodySkills.kin}}" data-dtype="Number"/>
-            <input type="text" name="data.bodySkills.{{key}}.spec" value="{{bodySkills.spec}}" data-dtype="Number"/>
-            <input type="text" name="data.bodySkills.{{key}}.item" value="{{bodySkills.item}}" data-dtype="Number"/>
-            <input type="text" name="data.bodySkills.{{key}}.modifier" value="{{bodySkills.modifier}}" data-dtype="Number"/>
-        </div>
-        {{/each}}
         </div>
         {{!-- Owned Items Tab --}}
         <div class="tab items" data-group="primary" data-tab="items">
