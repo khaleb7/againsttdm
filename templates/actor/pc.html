@@ -153,22 +153,6 @@
                     </div>
                 </div>
             </div>
-            <div class="resource-content flexrow gridatt">
-                <label> STATS  </label>
-                <label> Base </label>
-                <label> Kin </label>
-                <label> Spec  </label>
-                <Label> TOT  </Label>
-            </div>
-            {{#each data.stats as |stats key|}}
-            <div class="flexrow gridatt">
-                <label for="data.stats.{{key}}.value" class="attribute-label">{{stats.label}}</label>
-                <input type="text" name="data.stats.{{key}}.base" value="{{stats.base}}" data-dtype="Number"/>
-                <input type="text" name="data.stats.{{key}}.kin" value="{{stats.kin}}" data-dtype="Number"/>
-                <input type="text" name="data.stats.{{key}}.spec" value="{{stats.spec}}" data-dtype="Number"/>
-                <input type="text" name="data.stats.{{key}}.value" value="{{stats.value}}" data-dtype="Number"/>
-            </div>
-            {{/each}}
 
             <table id="againsttdm">
                 <tr>
@@ -179,11 +163,46 @@
                     <th>Total</th>
                 </tr>
                 <tr>
-                    <td><label for="data.stats.brn.value" class="attribute-label">{{stats.brn.label}}</label></td>
-                    <td> <input type="text" name="data.stats.brn.base" value="{{data.stats.brn.base}}" data-dtype="Number"/></td>
-                    <td><input type="text" name="data.stats.brn.kin" value="{{data.stats.brn.kin}}" data-dtype="Number"/></td>
-                    <td><input type="text" name="data.stats.brn.spec" value="{{data.stats.brn.spec}}" data-dtype="Number"/></td>
-                    <td><input type="text" name="data.stats.brn.value" value="{{data.stats.brn.value}}" data-dtype="Number"/></td>
+                    <td><label for="data.stats.brn.value" class="attribute-label">{{data.stats.brn.label}}</label></td>
+                    <td> <input type="text" name="data.stats.brn.base" value="{{data.stats.brn.base}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.brn.kin" value="{{data.stats.brn.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.brn.spec" value="{{data.stats.brn.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.brn.value" value="{{data.stats.brn.value}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><label for="data.stats.swi.value" class="attribute-label">{{data.stats.swi.label}}</label></td>
+                    <td> <input type="text" name="data.stats.swi.base" value="{{data.stats.swi.base}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.swi.kin" value="{{data.stats.swi.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.swi.spec" value="{{data.stats.swi.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.swi.value" value="{{data.stats.swi.value}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><label for="data.stats.for.value" class="attribute-label">{{data.stats.for.label}}</label></td>
+                    <td> <input type="text" name="data.stats.for.base" value="{{data.stats.for.base}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.for.kin" value="{{data.stats.for.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.for.spec" value="{{data.stats.for.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.for.value" value="{{data.stats.for.value}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><label for="data.stats.wit.value" class="attribute-label">{{data.stats.wit.label}}</label></td>
+                    <td> <input type="text" name="data.stats.wit.base" value="{{data.stats.wit.base}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.wit.kin" value="{{data.stats.wit.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.wit.spec" value="{{data.stats.wit.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.wit.value" value="{{data.stats.wit.value}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><label for="data.stats.wsd.value" class="attribute-label">{{data.stats.wsd.label}}</label></td>
+                    <td> <input type="text" name="data.stats.wsd.base" value="{{data.stats.wsd.base}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.wsd.kin" value="{{data.stats.wsd.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.wsd.spec" value="{{data.stats.wsd.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.wsd.value" value="{{data.stats.wsd.value}}" data-dtype="Number" placeholder="0"/></td>
+                </tr>
+                <tr>
+                    <td><label for="data.stats.bea.value" class="attribute-label">{{data.stats.bea.label}}</label></td>
+                    <td> <input type="text" name="data.stats.bea.base" value="{{data.stats.bea.base}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.bea.kin" value="{{data.stats.bea.kin}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.bea.spec" value="{{data.stats.bea.spec}}" data-dtype="Number" placeholder="0"/></td>
+                    <td><input type="text" name="data.stats.bea.value" value="{{data.stats.bea.value}}" data-dtype="Number" placeholder="0"/></td>
                 </tr>
             </table>
 
