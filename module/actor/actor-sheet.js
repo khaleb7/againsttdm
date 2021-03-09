@@ -8,9 +8,9 @@ export class againstTdmActorSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["againsttdm", "sheet", "actor"],
-      template: "systems/againsttdm/templates/actor/actor-sheet.html",
-      width: 800,
-      height: 900,
+      template: "systems/againsttdm/templates/actor/pc.html",
+      width: 900,
+      height: 1000,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
     });
   }
