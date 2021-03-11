@@ -497,13 +497,13 @@
       "biography": "",
       "traits": "",
       "level": {
-        "value": 0
+        "value": ""
       },
       "mr": {
-        "value": 0
+        "value": ""
       },
       "at": {
-        "value": 0
+        "value": ""
       },
       "def": {
         "value": 0
@@ -519,20 +519,24 @@
       },
       "attack": {
         "first": {
+          "label": "",
             "value": " ",
             "rollMod": " "
         },
         "second": {
+          "label": "",
             "value": " ",
             "rollMod": " "
           }
         },
         "third": {
+            "label": "",
             "value": " ",
             "rollMod": " "
         },
         "special": {
-            "value": " ",
+          "label": "",
+          "value": " ",
             "rollMod": " "
         }
       },
