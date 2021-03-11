@@ -1,6 +1,9 @@
 {
   "Actor": {
-    "types": ["character"],
+    "types": [
+      "character",
+      "npc"
+    ],
     "templates": {
       "base": {
         "hitPoints": {
@@ -36,11 +39,12 @@
         "wounds": {
           "value": ""
         }
-
-             }
+      }
     },
     "character": {
-      "templates": ["base"],
+      "templates": [
+        "base"
+      ],
       "biography": "",
       "traits": "",
       "narrative": {
@@ -93,13 +97,13 @@
           "fifth": ""
         },
         "equipment": {
-        "first": "",
-        "second": "",
-        "third": "",
-        "fourth": "",
-        "fifth": ""
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": ""
         }
-     },
+      },
       "kin": "",
       "level": 1,
       "xp": 0,
@@ -130,7 +134,7 @@
           "pStat": "data.stats.wsd.value",
           "modifier": 0,
           "spec": 0
-               }
+        }
       },
       "stats": {
         "brn": {
@@ -182,89 +186,88 @@
           "spec": 0
         }
       },
-
-        "armorSkills": {
-          "armor": {
-            "value": 0,
-            "stat": 0,
-            "kin": 0,
-            "spec": 0,
-            "item": 0,
-            "voc": 0,
-            "rank": 0,
-            "label": "Armor(no stat)",
-            "pStat": "",
-            "modifier": 0,
-            "rankBonus": 0
-          }
+      "armorSkills": {
+        "armor": {
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "label": "Armor(no stat)",
+          "pStat": "",
+          "modifier": 0,
+          "rankBonus": 0
+        }
+      },
+      "combatSkills": {
+        "blunt": {
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "label": "Blunt(BRN)",
+          "pStat": "data.stats.brn.value",
+          "modifier": 0,
+          "rankBonus": 0
         },
-        "combatSkills": {
-          "blunt": {
-            "value": 0,
-            "stat": 0,
-            "kin": 0,
-            "spec": 0,
-            "item": 0,
-            "voc": 0,
-            "rank": 0,
-            "label": "Blunt(BRN)",
-            "pStat": "data.stats.brn.value",
-            "modifier": 0,
-            "rankBonus": 0
-          },
-          "blades": {
-            "value": 0,
-            "stat": 0,
-            "kin": 0,
-            "spec": 0,
-            "item": 0,
-            "voc": 0,
-            "rank": 0,
-            "label": "Blades(BRN)",
-            "pStat": "data.stats.brn.value",
-            "modifier": 0,
-            "rankBonus": 0
-          },
-          "ranged": {
-            "value": 0,
-            "stat": 0,
-            "kin": 0,
-            "spec": 0,
-            "item": 0,
-            "voc": 0,
-            "rank": 0,
-            "label": "Ranged(SWI)",
-            "pStat": "data.stats.swi.value",
-            "modifier": 0,
-            "rankBonus": 0
-          },
-          "polearms": {
-            "value": 0,
-            "stat": 0,
-            "kin": 0,
-            "spec": 0,
-            "item": 0,
-            "voc": 0,
-            "rank": 0,
-            "label": "Polearms(BRN)",
-            "pStat": "data.stats.brn.value",
-            "modifier": 0,
-            "rankBonus": 0
-          },
-          "brawl": {
-            "value": 0,
-            "stat": 0,
-            "kin": 0,
-            "spec": 0,
-            "item": 0,
-            "voc": 0,
-            "rank": 0,
-            "label": "Brawl(BRN)",
-            "pStat": "data.stats.brn.value",
-            "modifier": 0,
-            "rankBonus": 0
-          }
+        "blades": {
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "label": "Blades(BRN)",
+          "pStat": "data.stats.brn.value",
+          "modifier": 0,
+          "rankBonus": 0
         },
+        "ranged": {
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "label": "Ranged(SWI)",
+          "pStat": "data.stats.swi.value",
+          "modifier": 0,
+          "rankBonus": 0
+        },
+        "polearms": {
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "label": "Polearms(BRN)",
+          "pStat": "data.stats.brn.value",
+          "modifier": 0,
+          "rankBonus": 0
+        },
+        "brawl": {
+          "value": 0,
+          "stat": 0,
+          "kin": 0,
+          "spec": 0,
+          "item": 0,
+          "voc": 0,
+          "rank": 0,
+          "label": "Brawl(BRN)",
+          "pStat": "data.stats.brn.value",
+          "modifier": 0,
+          "rankBonus": 0
+        }
+      },
       "adventuringSkills": {
         "athletics": {
           "value": 0,
@@ -486,8 +489,74 @@
         "min": 0,
         "max": 5
       }
-    }
-  },
+    },
+    "npc": {
+      "templates": [
+        "base"
+      ],
+      "biography": "",
+      "traits": "",
+      "level": {
+        "value": ""
+      },
+      "mr": {
+        "value": ""
+      },
+      "at": {
+        "value": ""
+      },
+      "def": {
+        "value": 0
+      },
+      "tsr": {
+        "value": 0
+      },
+      "wsr": {
+        "value": 0
+      },
+      "hps": {
+        "value": 0
+      },
+      "attack": {
+        "first": {
+          "label": "",
+            "value": " ",
+            "rollMod": " "
+        },
+        "second": {
+          "label": "",
+            "value": " ",
+            "rollMod": " "
+          }
+        },
+        "third": {
+            "label": "",
+            "value": " ",
+            "rollMod": " "
+        },
+        "special": {
+          "label": "",
+          "value": " ",
+            "rollMod": " "
+        }
+      },
+      "ct": {
+          "value": " ",
+          "rollMod": " "
+      },
+      "rog": {
+          "value": " ",
+          "rollMod": " "
+      },
+      "adv": {
+          "value": " ",
+          "rollMod": " "
+      },
+      "lor": {
+          "value": " ",
+          "rollMod": " "
+      }
+    },
   "Item": {
     "types": ["item"],
     "templates": {
