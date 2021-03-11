@@ -15,7 +15,9 @@
           "min": 0,
           "label": "Defense",
           "modifier": 0,
-          "max": 5
+          "max": 200,
+          "melee": 0,
+          "ranged": 0
         },
         "moveRate": {
           "value": 15,
@@ -30,7 +32,11 @@
           "label": "Magic Points",
           "modifier": 0,
           "max": 5
+        },
+        "wounds": {
+          "value": ""
         }
+
              }
     },
     "character": {
@@ -57,9 +63,43 @@
         "drivePoints": {
           "value": 0,
           "label": "Drive Points"
+        },
+        "background": {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": ""
+        },
+        "specialTraits": {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": ""
+        },
+        "armorAndshield": {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": ""
+        },
+        "weaponsAndattack": {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": ""
+        },
+        "equipment": {
+        "first": "",
+        "second": "",
+        "third": "",
+        "fourth": "",
+        "fifth": ""
         }
-      },
-
+     },
       "kin": "",
       "level": 1,
       "xp": 0,

@@ -2,6 +2,30 @@
 
     {{!-- Sheet Header --}}
     <header class="sheet-header">
+        <style>
+            #againsttdm {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #againsttdm td, #againsttdm th {
+                border: 1px solid #ddd;
+                padding: 2px;
+            }
+
+            #againsttdm tr:nth-child(even){background-color: #f2f2f2;}
+
+            #againsttdm tr:hover {background-color: #ddd;}
+
+            #againsttdm th {
+                padding-top: 3px;
+                padding-bottom: 3px;
+                text-align: center;
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="150" width="100"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
@@ -23,30 +47,7 @@
         </div>
     </header>
 
-    <style>
-        #againsttdm {
-            font-family: Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
 
-        #againsttdm td, #againsttdm th {
-            border: 1px solid #ddd;
-            padding: 2px;
-        }
-
-        #againsttdm tr:nth-child(even){background-color: #f2f2f2;}
-
-        #againsttdm tr:hover {background-color: #ddd;}
-
-        #againsttdm th {
-            padding-top: 3px;
-            padding-bottom: 3px;
-            text-align: center;
-            background-color: #4CAF50;
-            color: white;
-        }
-    </style>
     <table id="againsttdm">
         <tr>
             <th>Kin</th>
@@ -62,6 +63,7 @@
     </table>
     <table id="againsttdm">
         <tr>
+            <th> </th>
             <th>Hit Points</th>
             <th>Magic Points</th>
             <th>XP Points</th>
@@ -110,6 +112,110 @@
         {{!-- Biography Tab --}}
         <div class="tab biography" data-group="primary" data-tab="description">
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+            <table id="againsttdm">
+                <tr>
+                    <th>Backgrounds</th>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.background.first" value="{{data.narrative.background.first}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.background.two" value="{{data.narrative.background.two}}" data-dtype="string"/></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.background.three" value="{{data.narrative.background.three}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.background.four" value="{{data.narrative.background.four}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.background.five" value="{{data.narrative.background.five}}" data-dtype="string" /></td>
+                </tr>
+            </table>
+            <table id="againsttdm">
+                <tr>
+                    <th>Special Traits</th>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.specialTrait.first" value="{{data.narrative.specialTrait.first}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.specialTrait.two" value="{{data.narrative.specialTrait.two}}" data-dtype="string"/></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.specialTrait.three" value="{{data.narrative.specialTrait.three}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.specialTrait.four" value="{{data.narrative.specialTrait.four}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.specialTrait.five" value="{{data.narrative.specialTrait.five}}" data-dtype="string" /></td>
+                </tr>
+            </table>
+            <table id="againsttdm">
+                <tr>
+                    <th>Armor and Shield</th>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.armorAndshield.first" value="{{data.narrative.armorAndshield.first}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.armorAndshield.two" value="{{data.narrative.armorAndshield.two}}" data-dtype="string"/></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.armorAndshield.three" value="{{data.narrative.armorAndshield.three}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.armorAndshield.four" value="{{data.narrative.armorAndshield.four}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.armorAndshield.five" value="{{data.narrative.armorAndshield.five}}" data-dtype="string" /></td>
+                </tr>
+            </table>
+            <table id="againsttdm">
+                <tr>
+                    <th>Weapons and Attack</th>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.weaponsAndattack.first" value="{{data.narrative.weaponsAndattack.first}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.weaponsAndattack.two" value="{{data.narrative.weaponsAndattack.two}}" data-dtype="string"/></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.weaponsAndattack.three" value="{{data.narrative.weaponsAndattack.three}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.weaponsAndattack.four" value="{{data.narrative.weaponsAndattack.four}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.weaponsAndattack.five" value="{{data.narrative.weaponsAndattack.five}}" data-dtype="string" /></td>
+                </tr>
+            </table>
+            <table id="againsttdm">
+                <tr>
+                    <th>Equipment</th>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.equipment.first" value="{{data.narrative.equipment.first}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.equipment.two" value="{{data.narrative.equipment.two}}" data-dtype="string"/></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.equipment.three" value="{{data.narrative.equipment.three}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.equipment.four" value="{{data.narrative.equipment.four}}" data-dtype="string" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="data.narrative.equipment.five" value="{{data.narrative.equipment.five}}" data-dtype="string" /></td>
+                </tr>
+            </table>
+            
+
+
+
         </div>
         {{!-- Stats Tab --}}
 
