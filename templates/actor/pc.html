@@ -83,7 +83,9 @@
             <td><input type="text" name="data.level.value" value="{{data.level.value}}" data-dtype="Number"/></td>
             <td><input type="text" name="data.drivePoints.min" value="{{data.drivePoints.min}}" data-dtype="Number"/></td>
             <td><input type="text" name="data.moveRate.value" value="{{data.moveRate.value}}" data-dtype="Number"/></td>
-            <td><input type="text" name="data.defense.value" value="{{data.defense.value}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.defense.melee" value="{{data.defense.melee}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.defense.ranged" value="{{data.defense.ranged}}" data-dtype="Number"/></td>
+
         </tr>
         <tr>
             <td> Maximum</td>
@@ -92,6 +94,7 @@
             <td></td>
             <td></td>
             <td>10</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -112,6 +115,35 @@
         {{!-- Biography Tab --}}
         <div class="tab biography" data-group="primary" data-tab="description">
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+
+        </div>
+        {{!-- Stats Tab --}}
+
+
+
+        <div class="detail" data-group="primary" data-tab="Details">
+
+
+
+            <table id="againsttdm">
+                <tr>
+                    <th>Passions</th>
+                    <th> </th>
+
+                </tr>
+                <tr>
+                    <td><label>Nature</label></td>
+                    <td><input type="text" name="data.narrative.nature.value" value="{{data.narrative.nature.value}}" data-dtype="String"/></td>
+                </tr>
+                <tr>
+                    <td><label>Motivation</label></td>
+                    <td><input type="text" name="data.narrative.motivation.value" value="{{data.narrative.motivation.value}}" data-dtype="String"/></td>
+                </tr>
+                <tr>
+                    <td><label>Allegiance</label></td>
+                    <td><input type="text" name="data.narrative.allegiance.value" value="{{data.narrative.allegiance.value}}" data-dtype="String"/></td>
+                </tr>
+            </table>
             <table id="againsttdm">
                 <tr>
                     <th>Backgrounds</th>
@@ -212,38 +244,10 @@
                     <td> <input type="text" name="data.narrative.equipment.five" value="{{data.narrative.equipment.five}}" data-dtype="string" /></td>
                 </tr>
             </table>
-            
 
 
 
-        </div>
-        {{!-- Stats Tab --}}
 
-
-
-        <div class="detail" data-group="primary" data-tab="Details">
-
-
-
-            <table id="againsttdm">
-                <tr>
-                    <th>Passions</th>
-                    <th> </th>
-
-                </tr>
-                <tr>
-                    <td><label>Nature</label></td>
-                    <td><input type="text" name="data.narrative.nature.value" value="{{data.narrative.nature.value}}" data-dtype="String"/></td>
-                </tr>
-                <tr>
-                    <td><label>Motivation</label></td>
-                    <td><input type="text" name="data.narrative.motivation.value" value="{{data.narrative.motivation.value}}" data-dtype="String"/></td>
-                </tr>
-                <tr>
-                    <td><label>Allegiance</label></td>
-                    <td><input type="text" name="data.narrative.allegiance.value" value="{{data.narrative.allegiance.value}}" data-dtype="String"/></td>
-                </tr>
-            </table>
 
             <table id="againsttdm">
                 <tr>
