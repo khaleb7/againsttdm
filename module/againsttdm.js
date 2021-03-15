@@ -3,13 +3,15 @@ import { againstTdmActor } from "./actor/actor.js";
 import { againstTdmActorSheet } from "./actor/actor-sheet.js";
 import { againstTdmItem } from "./item/item.js";
 import { againstTdmItemSheet } from "./item/item-sheet.js";
+// import { againstNpcActor } from "./actor/actor.js";
+// import { againstNpcActorSheet } from "./actor/npc-sheet.js";
 
 Hooks.once('init', async function() {
 
   game.againsttdm = {
     againstTdmActor,
     againstTdmItem,
-    againstTdmNpc
+   // againstTdmNpc
   };
 
   /**
@@ -23,7 +25,7 @@ Hooks.once('init', async function() {
 
   // Define custom Entity classes
   CONFIG.Actor.entityClass = againstTdmActor;
-  CONFIG.Actor.entityClass = againstTdmNpc;
+  // CONFIG.Actor.entityClass = againstTdmNpc;
   CONFIG.Item.entityClass = againstTdmItem;
 
   // Register sheet application classes
@@ -31,7 +33,7 @@ Hooks.once('init', async function() {
   Actors.registerSheet("againsttdm", againstTdmActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("againsttdm", againstTdmItemSheet, { makeDefault: true });
-  Actors.registerSheet("againsttdm",againstTdmNpcSheet, {makeDefault: false });
+  // Actors.registerSheet("againsttdm",againstTdmNpcSheet, {makeDefault: false });
 
   // If you need to add Handlebars helpers, here are a few useful examples:
   Handlebars.registerHelper('concat', function() {
