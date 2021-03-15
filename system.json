@@ -2,7 +2,7 @@
   "name": "againsttdm",
   "title": "Against the Dark Master",
   "description": "The Against the Dark Master system for FoundryVTT!",
-  "version": "0.0.65",
+  "version": "0.0.66",
   "minimumCoreVersion": "0.5.5",
   "compatibleCoreVersion": "0.5.5",
   "templateVersion": 2,
