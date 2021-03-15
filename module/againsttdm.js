@@ -4,7 +4,7 @@ import { againstTdmActorSheet } from "./actor/actor-sheet.js";
 import { againstTdmItem } from "./item/item.js";
 import { againstTdmItemSheet } from "./item/item-sheet.js";
 // import { againstNpcActor } from "./actor/actor.js";
-// import { againstNpcActorSheet } from "./actor/npc-sheet.js";
+import { againstTdmNpcSheet } from "./actor/npc-sheet.js";
 
 Hooks.once('init', async function() {
 
