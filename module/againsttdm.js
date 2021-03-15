@@ -33,7 +33,7 @@ Hooks.once('init', async function() {
   Actors.registerSheet("againsttdm", againstTdmActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("againsttdm", againstTdmItemSheet, { makeDefault: true });
-  // Actors.registerSheet("againsttdm",againstTdmNpcSheet, {makeDefault: false });
+  Actors.registerSheet("againsttdm",againstTdmNpcSheet, {makeDefault: false });
 
   // If you need to add Handlebars helpers, here are a few useful examples:
   Handlebars.registerHelper('concat', function() {
