@@ -16,6 +16,7 @@ export class againstTdmActor extends Actor {
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
+    console.log(actorData.type);
     if (actorData.type === 'character') this._prepareCharacterData(actorData);
     if (actorData.type === 'npc') this._prepareNpcData(actorData);
   }
