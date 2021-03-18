@@ -4,7 +4,7 @@ import { againstTdmActorSheet } from "./actor/actor-sheet.js";
 import { againstTdmItem } from "./item/item.js";
 import { againstTdmItemSheet } from "./item/item-sheet.js";
 // import { againstNpcActor } from "./actor/actor.js";
-import { againstTdmNpcSheet } from "./actor/npc-sheet.js";
+// import { againstTdmNpcSheet } from "./actor/npc-sheet.js";
 
 Hooks.once('init', async function() {
 
@@ -32,7 +32,7 @@ Hooks.once('init', async function() {
   Actors.registerSheet("againsttdm", againstTdmActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("againsttdm", againstTdmItemSheet, { makeDefault: true });
-  Actors.registerSheet("againsttdm",againstTdmNpcSheet, { makeDefault: false });
+  // Actors.registerSheet("againsttdm",againstTdmNpcSheet, { makeDefault: false });
 
   // If you need to add Handlebars helpers, here are a few useful examples:
   Handlebars.registerHelper('concat', function() {

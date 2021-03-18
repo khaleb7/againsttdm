@@ -5,10 +5,14 @@
 export class againstTdmActorSheet extends ActorSheet {
 
   /** @override */
+  get template() {
+    if ( actorData.type === "npc") return "systems/againsttdm/templates/actor/npc.html";
+    return "systems/againsttdm/templates/actor/pc.html";
+  }
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["againsttdm", "sheet", "actor"],
-      template: "systems/againsttdm/templates/actor/pc.html",
+      // template: "systems/againsttdm/templates/actor/pc.html",
       width: 900,
       height: 1000,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
