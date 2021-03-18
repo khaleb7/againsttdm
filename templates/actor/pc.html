@@ -106,6 +106,7 @@
         <a class="item" data-tab="description">Description</a>
         <a class="item" data-tab="skills">Details</a>
         <a class="item" data-tab="items">Items</a>
+        <a class="item" data-tab="npc">Npc</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -673,6 +674,23 @@
                 {{/each}}
             </ol>
         </div>
+
+        {{!-- NPC Tab --}}
+        <div class="detail" data-group="primary" data-tab="npc">
+            <table id="againsttdm">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>RollMod</th>
+
+                </tr>
+                <tr>
+                    <td><input type="text" name="data.level.value" value="{{data.level.value}}" data-dtype="String"/></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
 
     </section>
 </form>
