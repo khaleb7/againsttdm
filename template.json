@@ -437,8 +437,8 @@
           "item": 0,
           "voc": 0,
           "rank": 0,
-          "label": "Blunt(BRN)",
-          "pStat": "data.stats.brn.value",
+          "label": "Cultures(WSD)",
+          "pStat": "data.stats.wsd.value",
           "modifier": 0,
           "rankBonus": 0
         },
